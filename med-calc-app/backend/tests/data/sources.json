@@ -1,5 +1,5 @@
 {
-  "reference_set_version": "1.0.2",
+  "reference_set_version": "1.0.4",
   "access_date": "2026-11-12",
   "module": "N1-eGFR-CKD-EPI",
   "review": {
@@ -50,10 +50,55 @@
       "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
       "locator": "Table 2, página impresa S137, página 22 del PDF",
       "role": "categorías G1, G2, G3a, G3b, G4, G5 aplicadas antes del redondeo"
+    },
+    {
+      "id": "TOMEU-INPUTS",
+      "file": "Información Adicional/CKD_EPI_21.pdf",
+      "locator": "Página 1, primer párrafo",
+      "sha256": "9506dc6d3fd894d2400f8af9cba978dcfdca57ebd98d1eb45b2d0431c3398564",
+      "role": "Directrices de revisión de entradas aportadas por el tutor y seleccionadas por el usuario para implementación."
+    },
+    {
+      "id": "TOMEU-DISCREPANCY",
+      "file": "Información Adicional/CKD_EPI_21.pdf",
+      "locator": "Página 1, párrafos sobre errores específicos y discrepancia entre eGFRcr y eGFRcys",
+      "sha256": "9506dc6d3fd894d2400f8af9cba978dcfdca57ebd98d1eb45b2d0431c3398564",
+      "role": "Regla operativa y texto neutro adoptados por petición del usuario en la anotación del PDF."
     }
   ],
+  "input_validation": {
+    "source": "TOMEU-INPUTS",
+    "adoption": "Límites del primer párrafo adoptados por petición del usuario en la anotación del PDF, 2026-11-12.",
+    "age_years": {
+      "minimum": 18,
+      "maximum": 120,
+      "outside": "bloquear"
+    },
+    "creatinine_mg_dl": {
+      "review_minimum": 0.2,
+      "review_maximum": 15,
+      "outside": "avisar y permitir cálculo para valores positivos y finitos"
+    },
+    "cystatin_mg_l": {
+      "review_minimum": 0.3,
+      "review_maximum": 8,
+      "outside": "avisar y permitir cálculo para valores positivos y finitos"
+    },
+    "decimal_entry": "El frontend admite coma o punto. El payload JSON contiene números.",
+    "interpretation": "Intervalos operativos de revisión de entradas. La evaluación clínica de los resultados sigue requiriendo su contexto.",
+    "error_messages": "La API devuelve HTTP 422 con detail y errors por campo. El frontend muestra el campo y la unidad admitida; creatinina en mg/dL y cistatina C en mg/L."
+  },
+  "discrepancy_rule": {
+    "source": "TOMEU-DISCREPANCY",
+    "scope": "Solo modo combinado: comparar estimaciones individuales de creatinina y cistatina C.",
+    "absolute_difference_threshold": 25,
+    "unit": "mL/min/1.73 m²",
+    "trigger": "Diferencia absoluta >= 25 O categorías de filtrado KDIGO distintas, utilizando valores sin redondear.",
+    "message": "Existen diferencias relevantes entre las estimaciones; revise calidad analítica, contexto clínico y factores no relacionados con la TFG.",
+    "interpretation": "Aviso informativo no bloqueante. Regla de revisión propuesta por el tutor; no constituye un diagnóstico."
+  },
   "acceptance": {
-    "raw_absolute_tolerance": 1e-8,
+    "raw_absolute_tolerance": 1e-08,
     "raw_relative_tolerance": 1e-10,
     "raw_rule": "abs(actual-reference) <= absolute + relative * abs(reference)",
     "raw_justification": "Tolerancia de ingeniería elegida para diferencias de aritmética binaria de doble precisión frente a Decimal 60. Se comprobará el error observado y se mantendrá versionada.",
@@ -62,10 +107,15 @@
     "invalid": "HTTP 422; comprobar también la ausencia de resultados numéricos"
   },
   "pending_criteria": [
-    {"id": "CYS-AGE-COEFFICIENT", "description": "Revisar con Tomeu la diferencia 0.9962 en la fila histórica de la tabla de 2021 frente a 0.996 en NIDDK y NKF. La referencia operativa actual usa 0.996 y concuerda con la calculadora externa.", "status": "pendiente de revisión documental del tutor"},
-    {"id": "AGE-MAX", "description": "Acordar máximo de edad. La API actual exige un mínimo de 18 años y admite edades superiores a las clínicamente plausibles.", "status": "pendiente de decisión clínica y ficha"},
-    {"id": "UNITS", "description": "La interfaz y la API actuales admiten creatinina en mg/dL. El soporte µmol/L y su conversión 88.4 están pendientes de implementación.", "status": "pendiente de implementación"},
-    {"id": "PLAUSIBILITY", "description": "Acordar avisos de plausibilidad propuestos por Tomeu y sus límites exactos.", "status": "pendiente de decisión clínica y ficha"},
-    {"id": "DISCREPANCY", "description": "Acordar la regla y el aviso por discrepancia entre estimaciones.", "status": "pendiente de decisión clínica y ficha"}
+    {
+      "id": "CYS-AGE-COEFFICIENT",
+      "description": "Revisar con Tomeu la diferencia 0.9962 en la fila histórica de la tabla de 2021 frente a 0.996 en NIDDK y NKF. La referencia operativa actual usa 0.996 y concuerda con la calculadora externa.",
+      "status": "pendiente de revisión documental del tutor"
+    },
+    {
+      "id": "UNITS",
+      "description": "La interfaz y la API actuales admiten creatinina en mg/dL. El soporte µmol/L y su conversión 88.4 están pendientes de implementación.",
+      "status": "pendiente de implementación"
+    }
   ]
 }

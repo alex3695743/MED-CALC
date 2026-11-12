@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-11-12T19:18:53.482680+00:00",
+  "generated_at_utc": "2026-11-12T20:38:20.562228+00:00",
   "status": "PASSED",
   "strict_mode": false,
   "exit_code": 0,
   "python": "3.12.14",
   "platform": "Windows-11-10.0.26200-SP0",
-  "reference_set_version": "1.0.2",
+  "reference_set_version": "1.0.4",
   "clinical_signoff": "pendiente de Tomeu",
   "test_methods": 6,
   "observations_by_kind": {
@@ -13,7 +13,7 @@
     "raw": 126
   },
   "events_by_status": {
-    "passed": 352
+    "passed": 386
   },
   "maximum_raw_absolute_error": 2.8421709430404007e-13,
   "events": [
@@ -762,11 +762,96 @@
       "detail": ""
     },
     {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', fields={'creatinine_mg_dl': 0.199})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', fields={'creatinine_mg_dl': 0.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', fields={'creatinine_mg_dl': 0.201})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', fields={'creatinine_mg_dl': 14.999})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', fields={'creatinine_mg_dl': 15})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', fields={'creatinine_mg_dl': 15.001})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', fields={'cystatin_mg_l': 0.299})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', fields={'cystatin_mg_l': 0.3})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', fields={'cystatin_mg_l': 0.301})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', fields={'cystatin_mg_l': 7.999})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', fields={'cystatin_mg_l': 8})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', fields={'cystatin_mg_l': 8.001})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', fields={'creatinine_mg_dl': 0.1, 'cystatin_mg_l': 0.1})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', fields={'creatinine_mg_dl': 0.2, 'cystatin_mg_l': 8})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', fields={'creatinine_mg_dl': 16, 'cystatin_mg_l': 0.9})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
       "id": "tests.test_suite.EgfrTests.test_frozen_cases_through_api",
       "status": "passed"
     },
     {
       "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 17, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 121, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 200, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
       "status": "passed",
       "detail": ""
     },
@@ -906,6 +991,56 @@
       "detail": ""
     },
     {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (age=18)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (age=120)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'age': 121})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'sex': 'X'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'method': 'unknown'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'creatinine_mg_dl': 'abc'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'creatinine_mg_dl': None})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'method': 'combined', 'cystatin_mg_l': 0})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'method': 'combined'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'cystatin_mg_l': 1})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
       "id": "tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes",
       "status": "passed"
     },
@@ -1006,6 +1141,41 @@
     },
     {
       "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=90.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=100, cystatin=124.99999999999999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=100, cystatin=125)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=125.00000000000001, cystatin=100)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=59.999, cystatin=60)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=60, cystatin=59.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=65, cystatin=65)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (creatinine=35, cystatin=90)",
       "status": "passed",
       "detail": ""
     },
@@ -4632,15 +4802,15 @@
   ],
   "tested_files_sha256": {
     "egfr.py": "68de3d7a6dc84c068fcd67889ca6d40b19e9fb6262e49a56c4114b6f2a760e8e",
-    "main.py": "8958df84d725ca4ad0768798439e5265fb79680538ead5295583d36178581297",
+    "main.py": "ec1826e52cef84052e6edbdc3725c0e855a314c116e5e85e366985ce186797e2",
     "tests/requirements.lock": "c2b4bd4f1dbbc9eec4a63a0d957ca0d291fed90cd687225547473c2d504e6ba6",
     "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "tests/__main__.py": "b07bf47e87e8a497f0d8fd26b53086b119ccacf796a209404db4de3224085b98",
+    "tests/__main__.py": "6d51cd8bd95b97f0b3534d487c454ddfeef650ed5cfb32ffa2ba0ef067c44866",
     "tests/generate_reference.py": "14c184b1dd9b1cb1dce958cb7f52e3bcd4e8576c7f3022584f36f3d7719a3b5c",
     "tests/reference.py": "7557430f0d991b1bede26cc704d50d322f15af182456d5e9ba7d05fda2407008",
-    "tests/test_suite.py": "928ac9a5af7b9c3104bd51c38cfa62b337e89e767f68733afd8ead9d14c1295b"
+    "tests/test_suite.py": "2f3aeb575b5600433f9b7fd031f984eac1ba139e82d280316e1fcfd76a00fd4d"
   },
-  "evidence_manifest_sha256": "1339b36b6f6be391e2d8cab3339fdb3d5799cd3323653722e6b58546eeb84517",
+  "evidence_manifest_sha256": "c220bc25b8d813954af8cd970cba6e6c7107b1b6deb73be849f35285e8c0d85b",
   "pending_criteria": [
     {
       "id": "CYS-AGE-COEFFICIENT",
@@ -4648,24 +4818,40 @@
       "status": "pendiente de revisión documental del tutor"
     },
     {
-      "id": "AGE-MAX",
-      "description": "Acordar máximo de edad. La API actual exige un mínimo de 18 años y admite edades superiores a las clínicamente plausibles.",
-      "status": "pendiente de decisión clínica y ficha"
-    },
-    {
       "id": "UNITS",
       "description": "La interfaz y la API actuales admiten creatinina en mg/dL. El soporte µmol/L y su conversión 88.4 están pendientes de implementación.",
       "status": "pendiente de implementación"
-    },
-    {
-      "id": "PLAUSIBILITY",
-      "description": "Acordar avisos de plausibilidad propuestos por Tomeu y sus límites exactos.",
-      "status": "pendiente de decisión clínica y ficha"
-    },
-    {
-      "id": "DISCREPANCY",
-      "description": "Acordar la regla y el aviso por discrepancia entre estimaciones.",
-      "status": "pendiente de decisión clínica y ficha"
     }
-  ]
+  ],
+  "input_validation": {
+    "source": "TOMEU-INPUTS",
+    "adoption": "Límites del primer párrafo adoptados por petición del usuario en la anotación del PDF, 2026-11-12.",
+    "age_years": {
+      "minimum": 18,
+      "maximum": 120,
+      "outside": "bloquear"
+    },
+    "creatinine_mg_dl": {
+      "review_minimum": 0.2,
+      "review_maximum": 15,
+      "outside": "avisar y permitir cálculo para valores positivos y finitos"
+    },
+    "cystatin_mg_l": {
+      "review_minimum": 0.3,
+      "review_maximum": 8,
+      "outside": "avisar y permitir cálculo para valores positivos y finitos"
+    },
+    "decimal_entry": "El frontend admite coma o punto. El payload JSON contiene números.",
+    "interpretation": "Intervalos operativos de revisión de entradas. La evaluación clínica de los resultados sigue requiriendo su contexto.",
+    "error_messages": "La API devuelve HTTP 422 con detail y errors por campo. El frontend muestra el campo y la unidad admitida; creatinina en mg/dL y cistatina C en mg/L."
+  },
+  "discrepancy_rule": {
+    "source": "TOMEU-DISCREPANCY",
+    "scope": "Solo modo combinado: comparar estimaciones individuales de creatinina y cistatina C.",
+    "absolute_difference_threshold": 25,
+    "unit": "mL/min/1.73 m²",
+    "trigger": "Diferencia absoluta >= 25 O categorías de filtrado KDIGO distintas, utilizando valores sin redondear.",
+    "message": "Existen diferencias relevantes entre las estimaciones; revise calidad analítica, contexto clínico y factores no relacionados con la TFG.",
+    "interpretation": "Aviso informativo no bloqueante. Regla de revisión propuesta por el tutor; no constituye un diagnóstico."
+  }
 }

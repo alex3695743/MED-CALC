@@ -87,6 +87,8 @@ def main():
         'tested_files_sha256': hashes,
         'evidence_manifest_sha256': hashlib.sha256((TESTS / 'data/sha256.json').read_bytes()).hexdigest(),
         'pending_criteria': sources['pending_criteria'],
+        'input_validation': sources['input_validation'],
+        'discrepancy_rule': sources['discrepancy_rule'],
     }
     reports = TESTS / 'reports'
     reports.mkdir(exist_ok=True)

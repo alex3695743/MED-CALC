@@ -8,8 +8,8 @@ const methods = [
 ]
 
 const markers = {
-  creatinine: { label: 'Creatinina sérica', unit: 'mg/dL', placeholder: 'Ej. 1,2' },
-  cystatin: { label: 'Cistatina C sérica', unit: 'mg/L', placeholder: 'Ej. 0,9' },
+  creatinine: { label: 'Creatinina sérica', unit: 'mg/dL', placeholder: 'Ej. 1,2', lower: 0.2, upper: 15, interval: '0,2–15 mg/dL' },
+  cystatin: { label: 'Cistatina C sérica', unit: 'mg/L', placeholder: 'Ej. 0,9', lower: 0.3, upper: 8, interval: '0,3–8 mg/L' },
 }
 
 // Tramos de filtrado de la tabla 2 de KDIGO 2024.
@@ -26,6 +26,20 @@ const egfrFormat = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 1, ma
 const initialValues = { age: '', sex: '', creatinine: '', cystatin: '' }
 const inputClasses = 'min-h-12 w-full rounded-xl border border-line bg-white px-3.5 text-base text-ink placeholder:text-slate-500 focus:border-teal focus:outline-offset-2 aria-invalid:border-red-600'
 
+function parseBiomarker(value) {
+  const normalized = value.trim().replace(',', '.')
+  return /^(?:\d+(?:\.\d+)?|\.\d+)$/.test(normalized) ? Number(normalized) : NaN
+}
+
+function plausibilityWarning(name, value) {
+  const number = parseBiomarker(value)
+  const { lower, upper, interval } = markers[name]
+  if (Number.isFinite(number) && number > 0 && (number < lower || number > upper)) {
+    return `Valor fuera del intervalo de revisión de ${interval}. Comprueba el dato y la unidad.`
+  }
+  return undefined
+}
+
 function validate(values, method) {
   const errors = {}
   const age = values.age.trim()
@@ -34,6 +48,8 @@ function validate(values, method) {
     errors.age = 'Introduce la edad en años cumplidos.'
   } else if (Number(age) < 18) {
     errors.age = 'Esta calculadora es para personas de 18 años o más.'
+  } else if (Number(age) > 120) {
+    errors.age = 'Introduce una edad de 18 a 120 años.'
   }
 
   if (!['F', 'M'].includes(values.sex)) {
@@ -41,17 +57,17 @@ function validate(values, method) {
   }
 
   for (const marker of method.markers) {
-    const value = values[marker].trim()
-    const number = Number(value.replace(',', '.'))
-    if (!/^(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(value) || !Number.isFinite(number) || number <= 0) {
-      errors[marker] = `Introduce un valor mayor que cero en ${markers[marker].unit}.`
+    const number = parseBiomarker(values[marker])
+    if (!Number.isFinite(number) || number <= 0) {
+      const label = marker === 'creatinine' ? 'creatinina' : 'cistatina C'
+      errors[marker] = `Introduce una ${label} válida en ${markers[marker].unit}, mayor que cero.`
     }
   }
 
   return errors
 }
 
-function Field({ name, label, unit, error, children }) {
+function Field({ name, label, unit, error, warning, children }) {
   return (
     <div className="min-w-0">
       <label htmlFor={name} className="mb-2 block text-sm font-bold text-navy">{label}</label>
@@ -64,6 +80,7 @@ function Field({ name, label, unit, error, children }) {
         )}
       </div>
       {error && <p id={`${name}-error`} className="mt-1.5 text-sm text-red-700">{error}</p>}
+      {!error && warning && <p id={`${name}-warning`} className="mt-1.5 text-sm text-amber-900">{warning}</p>}
     </div>
   )
 }
@@ -71,6 +88,7 @@ function Field({ name, label, unit, error, children }) {
 function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate }) {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
+  const warnings = Object.fromEntries(method.markers.map((name) => [name, plausibilityWarning(name, values[name])]))
 
   function changeValue(event) {
     const { name, value } = event.target
@@ -97,7 +115,7 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
       return
     }
 
-    onCalculate(values)
+    onCalculate(values, setErrors)
   }
 
   function reset(event) {
@@ -109,7 +127,7 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
   }
 
   function fieldProps(name, unit) {
-    const descriptions = [unit && `${name}-unit`, errors[name] && `${name}-error`].filter(Boolean)
+    const descriptions = [unit && `${name}-unit`, errors[name] ? `${name}-error` : warnings[name] && `${name}-warning`].filter(Boolean)
     return {
       id: name,
       name,
@@ -159,12 +177,13 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
         {method.markers.map((name) => {
           const { label, unit, placeholder } = markers[name]
           return (
-            <Field key={name} name={name} label={label} unit={unit} error={errors[name]}>
+            <Field key={name} name={name} label={label} unit={unit} error={errors[name]} warning={warnings[name]}>
               <input {...fieldProps(name, unit)} inputMode="decimal" placeholder={placeholder} className={`${inputClasses} pr-20`} />
             </Field>
           )
         })}
       </div>
+      <p className="mt-4 text-xs leading-relaxed text-slate-600">Edad admitida de 18 a 120 años. Los avisos de revisión de biomarcadores permiten continuar el cálculo.</p>
 
       <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-line pt-5">
         <button type="submit" disabled={pending} className="inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-navy px-5 text-sm font-bold text-white transition hover:bg-[#0c293e] disabled:opacity-60">
@@ -267,9 +286,36 @@ export function ResultPanel({ method, pending, error, panelRef, result }) {
                     {comparison ? egfrFormat.format(comparison.value) : '—'}{' '}
                     <span className="text-xs font-normal text-slate-200">mL/min/1,73 m²</span>
                   </p>
+                  {comparison && <p className="mt-1 text-xs text-slate-200">Categoría {comparison.category}</p>}
                 </div>
               )
             })}
+          </div>
+        )}
+        {hasResult && result.discrepancy?.detected && (
+          <div role="status" className="mt-4 rounded-xl border border-[#aeeae3]/40 bg-[#e5f3f1] p-3 text-sm leading-relaxed text-navy">
+            <p className="flex items-center gap-2 font-bold"><Icon name="info" className="size-4 shrink-0" /> Diferencias entre estimaciones</p>
+            <p className="mt-2">{result.discrepancy.message}</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              {result.discrepancy.absolute_difference >= result.discrepancy.threshold && (
+                <li>Diferencia absoluta: {egfrFormat.format(result.discrepancy.absolute_difference)} mL/min/1,73 m²; umbral: ≥{result.discrepancy.threshold} mL/min/1,73 m².</li>
+              )}
+              {result.discrepancy.different_categories && (
+                <li>Categorías de filtrado distintas: creatinina {result.comparisons.creatinine.category} y cistatina C {result.comparisons.cystatin.category}.</li>
+              )}
+            </ul>
+            <p className="mt-2 text-xs">La comparación utiliza los valores sin redondear. Este aviso no establece un diagnóstico.</p>
+          </div>
+        )}
+        {hasResult && method.id === 'combined' && (
+          <p className="mt-3 text-xs leading-relaxed text-slate-200">Se avisa si la diferencia absoluta entre las estimaciones individuales es ≥25 mL/min/1,73 m² o si sus categorías de filtrado KDIGO son distintas.</p>
+        )}
+        {hasResult && result.warnings?.length > 0 && (
+          <div role="status" className="mt-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-950">
+            <p className="flex items-center gap-2 font-bold"><Icon name="info" className="size-4 shrink-0" /> Revisa las entradas</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              {result.warnings.map((warning) => <li key={warning.field}>{warning.message}</li>)}
+            </ul>
           </div>
         )}
         <CategoryScale category={category} hasResult={hasResult} />
@@ -305,6 +351,16 @@ function AboutCalculator() {
             Unidades y limitaciones <Icon name="chevron" className="size-4 shrink-0 text-teal group-open:rotate-180" />
           </summary>
           <p className="pb-4 text-sm leading-relaxed text-slate-700">Introduce creatinina sérica estandarizada en mg/dL y cistatina C estandarizada en mg/L. La eGFR se expresa en mL/min/1,73 m². Un valor aislado es insuficiente para diagnosticar enfermedad renal crónica.</p>
+        </details>
+        <details className="group">
+          <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-2 py-3 text-sm font-bold text-navy">
+            ¿Cuándo puede ayudar la cistatina C? <Icon name="chevron" className="size-4 shrink-0 text-teal group-open:rotate-180" />
+          </summary>
+          <div className="space-y-2 pb-4 text-sm leading-relaxed text-slate-700">
+            <p>La <strong>creatinina</strong> puede variar por la masa muscular, la alimentación y otras circunstancias, además de la función renal. Por eso, una estimación basada solo en creatinina puede ser menos fiable, por ejemplo, en personas con muy poca o mucha masa muscular.</p>
+            <p>La <strong>cistatina C</strong> puede aportar información adicional en estas situaciones, pero también tiene limitaciones: las alteraciones de la tiroides, los corticoides y la inflamación pueden modificar sus niveles. Su interpretación requiere tener en cuenta el contexto clínico.</p>
+            <p><a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/factors-affecting-egfr-accuracy/clinical-measurements" className="font-semibold text-teal underline underline-offset-4">NIDDK · Factores que afectan a la estimación del filtrado</a></p>
+          </div>
         </details>
         <details className="group">
           <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-2 py-3 text-sm font-bold text-navy">
@@ -348,15 +404,15 @@ export default function EgfrPage() {
     clearResult()
   }
 
-  async function calculate(values) {
+  async function calculate(values, setFieldErrors) {
     requestRef.current?.abort()
     const request = new AbortController()
     requestRef.current = request
     setCalculation({ pending: true })
 
     const body = { age: Number(values.age), sex: values.sex, method: method.id }
-    if (method.markers.includes('creatinine')) body.creatinine_mg_dl = Number(values.creatinine.replace(',', '.'))
-    if (method.markers.includes('cystatin')) body.cystatin_mg_l = Number(values.cystatin.replace(',', '.'))
+    if (method.markers.includes('creatinine')) body.creatinine_mg_dl = parseBiomarker(values.creatinine)
+    if (method.markers.includes('cystatin')) body.cystatin_mg_l = parseBiomarker(values.cystatin)
 
     try {
       const response = await fetch('/api/egfr', {
@@ -366,7 +422,15 @@ export default function EgfrPage() {
         signal: request.signal,
       })
       if (response.status === 422) {
-        if (!request.signal.aborted) setCalculation({ error: 'El servidor no pudo calcular el filtrado. Revisa los datos y sus unidades.' })
+        const failure = await response.json()
+        if (!request.signal.aborted) {
+          const fieldNames = { age: 'age', sex: 'sex', creatinine_mg_dl: 'creatinine', cystatin_mg_l: 'cystatin' }
+          const fieldErrors = Object.fromEntries(Object.entries(failure.errors || {})
+            .filter(([name, message]) => fieldNames[name] && typeof message === 'string')
+            .map(([name, message]) => [fieldNames[name], message]))
+          setFieldErrors(fieldErrors)
+          setCalculation({ error: typeof failure.detail === 'string' ? failure.detail : 'Revisa las entradas indicadas y sus unidades.' })
+        }
       } else {
         if (!response.ok) throw new Error('Servicio no disponible')
         const result = await response.json()

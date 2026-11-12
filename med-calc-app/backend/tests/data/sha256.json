@@ -1,6 +1,6 @@
 {
   "tests/data/reference-cases.json": "b138cf9c1204a00a9002e91886ce460c30178885dc3052d8c551a551bd0c1b4b",
-  "tests/data/sources.json": "e67426070ccb9353d28b57702e3163f5511379a1f2fca0638b3ff9f3a48e02b6",
+  "tests/data/sources.json": "0281a83adb20785d486d35e7acfc921e0f87113af90222f0d8a2eb44cd7647a4",
   "tests/reference.py": "7557430f0d991b1bede26cc704d50d322f15af182456d5e9ba7d05fda2407008",
   "tests/generate_reference.py": "14c184b1dd9b1cb1dce958cb7f52e3bcd4e8576c7f3022584f36f3d7719a3b5c",
   "tests/requirements.lock": "c2b4bd4f1dbbc9eec4a63a0d957ca0d291fed90cd687225547473c2d504e6ba6",

@@ -10,7 +10,7 @@ from pathlib import Path
 from httpx import ASGITransport, AsyncClient
 
 import egfr
-from main import app
+from main import Estimate, app, compare_estimates
 from tests.reference import calculate, category
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -70,12 +70,47 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                         self.assertEqual(comparison['equation'], equations[method])
                         self.assertLessEqual(abs(comparison['value'] - float(reference)), tolerance(float(reference)))
                         self.assertEqual(comparison['category'], category(reference))
+                    cr, cy = result['comparisons']['creatinine'], result['comparisons']['cystatin']
+                    discrepancy = result['discrepancy']
+                    difference = abs(cr['value'] - cy['value'])
+                    different_categories = cr['category'] != cy['category']
+                    self.assertEqual(discrepancy['absolute_difference'], difference)
+                    self.assertEqual(discrepancy['threshold'], 25)
+                    self.assertEqual(discrepancy['different_categories'], different_categories)
+                    detected = difference >= 25 or different_categories
+                    self.assertEqual(discrepancy['detected'], detected)
+                    self.assertEqual(bool(discrepancy['message']), detected)
                 else:
                     self.assertEqual(result['comparisons'], {})
+                    self.assertIsNone(result['discrepancy'])
+
+        # Avisos no bloqueantes en los límites operativos de revisión de entradas.
+        warning_cases = []
+        for method, field, boundaries in [
+            ('creatinine', 'creatinine_mg_dl', [(0.199, True), (0.2, False), (0.201, False), (14.999, False), (15, False), (15.001, True)]),
+            ('cystatin', 'cystatin_mg_l', [(0.299, True), (0.3, False), (0.301, False), (7.999, False), (8, False), (8.001, True)]),
+        ]:
+            for value, warned in boundaries:
+                warning_cases.append((method, {field: value}, [field] if warned else []))
+        warning_cases.extend([
+            ('combined', {'creatinine_mg_dl': 0.1, 'cystatin_mg_l': 0.1}, ['creatinine_mg_dl', 'cystatin_mg_l']),
+            ('combined', {'creatinine_mg_dl': 0.2, 'cystatin_mg_l': 8}, []),
+            ('combined', {'creatinine_mg_dl': 16, 'cystatin_mg_l': 0.9}, ['creatinine_mg_dl']),
+        ])
+        for method, fields, expected_fields in warning_cases:
+            with self.subTest(method=method, fields=fields):
+                response = await self.client.post(EGFR_URL, json={'age': 62, 'sex': 'F', 'method': method, **fields})
+                self.assertEqual(response.status_code, 200, response.text)
+                result = response.json()
+                self.assertEqual([warning['field'] for warning in result['warnings']], expected_fields)
+                self.assertGreater(result['value'], 0)
+                for warning in result['warnings']:
+                    unit = 'mg/dL' if warning['field'] == 'creatinine_mg_dl' else 'mg/L'
+                    self.assertIn(unit, warning['message'])
 
     async def test_invalid_json_types_and_numeric_extremes(self):
         valid = {'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2}
-        changes = [{'age': 17}, {'age': None}, {'age': True}, {'age': 62.5}, {'age': '62'},
+        changes = [{'age': 17}, {'age': 121}, {'age': 200}, {'age': None}, {'age': True}, {'age': 62.5}, {'age': '62'},
                    {'sex': 'X'}, {'method': 'unknown'},
                    {'creatinine_mg_dl': True}, {'creatinine_mg_dl': '1.2'},
                    {'creatinine_mg_dl': 'abc'}, {'creatinine_mg_dl': 0}, {'creatinine_mg_dl': -1},
@@ -98,10 +133,31 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                 response = await self.client.post(EGFR_URL, content=json.dumps(payload), headers={'Content-Type': 'application/json'})
                 self.assertEqual(response.status_code, 422, response.text)
                 self.assertNotIn('value', response.json())
+                self.assertIsInstance(response.json()['detail'], str)
         for body in ['{', '[]', 'null']:
             with self.subTest(body=body):
                 response = await self.client.post(EGFR_URL, content=body, headers={'Content-Type': 'application/json'})
                 self.assertEqual(response.status_code, 422, response.text)
+        for age in [18, 120]:
+            with self.subTest(age=age):
+                response = await self.client.post(EGFR_URL, json={**valid, 'age': age})
+                self.assertEqual(response.status_code, 200, response.text)
+
+        # Errores específicos incluso si se accede a la API sin pasar por la web.
+        for change, field, fragment in [
+            ({'age': 121}, 'age', '18 a 120'),
+            ({'sex': 'X'}, 'sex', 'sexo'),
+            ({'method': 'unknown'}, 'method', 'método'),
+            ({'creatinine_mg_dl': 'abc'}, 'creatinine_mg_dl', 'creatinina válida en mg/dL'),
+            ({'creatinine_mg_dl': None}, 'creatinine_mg_dl', 'creatinina válida en mg/dL'),
+            ({'method': 'combined', 'cystatin_mg_l': 0}, 'cystatin_mg_l', 'cistatina C válida en mg/L'),
+            ({'method': 'combined'}, 'cystatin_mg_l', 'cistatina C válida en mg/L'),
+            ({'cystatin_mg_l': 1}, 'cystatin_mg_l', 'método seleccionado'),
+        ]:
+            with self.subTest(change=change):
+                response = await self.client.post(EGFR_URL, json={**valid, **change})
+                self.assertEqual(response.status_code, 422, response.text)
+                self.assertIn(fragment, response.json()['errors'][field])
 
     def test_evidence_integrity(self):
         manifest = json.loads((DATA / 'sha256.json').read_text(encoding='utf-8'))
@@ -154,3 +210,21 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
             for value, expected in [(boundary - 0.001, below), (nextafter(boundary, -inf), below), (boundary, above), (boundary + 0.001, above)]:
                 with self.subTest(value=value):
                     self.assertEqual(egfr.gfr_category(value), expected)
+
+        # Aislar cada condición de la regla y comprobar el umbral sin redondear.
+        for cr, cy, detected, category_changed in [
+            (100, nextafter(125, -inf), False, False),
+            (100, 125, True, False),
+            (nextafter(125, inf), 100, True, False),
+            (59.999, 60, True, True),
+            (60, 59.999, True, True),
+            (65, 65, False, False),
+            (35, 90, True, True),
+        ]:
+            with self.subTest(creatinine=cr, cystatin=cy):
+                comparison = compare_estimates(
+                    Estimate(value=cr, category=egfr.gfr_category(cr), equation='cr'),
+                    Estimate(value=cy, category=egfr.gfr_category(cy), equation='cy'),
+                )
+                self.assertEqual(comparison.detected, detected)
+                self.assertEqual(comparison.different_categories, category_changed)
