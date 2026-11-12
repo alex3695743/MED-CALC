@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mockup de la página de inicio de MED-CALC." />
+    <title>MED-CALC | Calculadoras clínicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['DM Sans', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+            colors: { ink: '#182734', navy: '#12334D', teal: '#087E8B', mist: '#F4F8F8', line: '#D9E3E5' },
+            boxShadow: { soft: '0 18px 50px rgba(18, 51, 77, .10)' }
+          }
+        }
+      };
+    </script>
+    <style>
+      .material-symbols-rounded { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .material-symbols-rounded.fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .category-active { background: #12334D; color: white; border-color: #12334D; }
+      .calculator-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+      .calculator-card:hover { transform: translateY(-3px); box-shadow: 0 16px 35px rgba(18, 51, 77, .10); border-color: #9ab8be; }
+    </style>
+  </head>
+  <body class="bg-mist font-sans text-ink antialiased">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-navy focus:shadow">Saltar al contenido</a>
+
+    <header class="border-b border-line bg-white">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
+        <a href="#inicio" class="flex items-center gap-3" aria-label="MED-CALC, inicio">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-navy text-white shadow-sm"><span class="material-symbols-rounded fill">vital_signs</span></span>
+          <span>
+            <span class="block text-lg font-bold tracking-tight text-navy">MED-CALC</span>
+            <span class="block text-xs text-slate-500">Herramientas de apoyo clínico</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex" aria-label="Navegación principal">
+          <a class="text-navy" href="#calculadoras">Calculadoras</a>
+          <a class="hover:text-navy" href="#como-usar">Cómo funciona</a>
+          <a class="hover:text-navy" href="#evidencia">Evidencia y fuentes</a>
+        </nav>
+        <a href="#calculadoras" class="inline-flex items-center gap-2 rounded-xl bg-navy px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0c293e]">
+          Explorar catálogo <span class="material-symbols-rounded text-lg">arrow_forward</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section id="inicio" class="relative overflow-hidden bg-white">
+        <div class="absolute right-[-120px] top-[-150px] h-80 w-80 rounded-full bg-teal/10 blur-3xl"></div>
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:py-24">
+          <div class="relative max-w-2xl">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full bg-teal/10 px-3 py-1.5 text-sm font-semibold text-teal"><span class="material-symbols-rounded text-base">verified</span>Modelos publicados y documentados</p>
+            <h1 class="font-serif text-4xl font-bold leading-[1.08] tracking-tight text-navy sm:text-5xl lg:text-6xl">Calcula con claridad. <span class="text-teal">Decide con contexto.</span></h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">Calculadoras clínicas de nefrología y cardiología en un único lugar: entradas guiadas, resultados comprensibles y referencias a sus modelos publicados.</p>
+            <div class="mt-8 max-w-2xl rounded-2xl border border-line bg-white p-2 shadow-soft">
+              <label class="sr-only" for="search">Buscar una calculadora clínica</label>
+              <div class="flex items-center gap-3 px-3">
+                <span class="material-symbols-rounded text-teal">search</span>
+                <input id="search" class="min-w-0 flex-1 bg-transparent py-3 text-base outline-none placeholder:text-slate-400" type="search" placeholder="Buscar por nombre, especialidad o situación clínica" />
+                <button id="searchButton" type="button" class="hidden rounded-xl bg-navy px-4 py-2.5 text-sm font-semibold text-white sm:block">Buscar</button>
+              </div>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500"><span>Más consultadas:</span><button class="quick-search font-medium text-teal hover:underline" data-query="CKD-EPI">CKD-EPI 2021</button><button class="quick-search font-medium text-teal hover:underline" data-query="CHA">CHA₂DS₂-VA</button><button class="quick-search font-medium text-teal hover:underline" data-query="SCORE2">SCORE2</button></div>
+          </div>
+
+          <aside class="relative rounded-3xl border border-[#c9dde0] bg-[#f7fbfb] p-5 shadow-soft sm:p-7" aria-label="Vista previa de calculadora">
+            <div class="flex items-start justify-between gap-4">
+              <div><p class="text-sm font-semibold text-teal">CALCULADORA DESTACADA</p><h2 class="mt-1 text-2xl font-bold text-navy">CKD-EPI 2021</h2><p class="mt-1 text-sm text-slate-600">Filtrado glomerular estimado</p></div>
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-white text-teal shadow-sm"><span class="material-symbols-rounded fill">water_drop</span></span>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <div class="rounded-xl border border-line bg-white p-3"><p class="text-xs font-medium text-slate-500">Creatinina</p><p class="mt-1 text-xl font-semibold text-navy">1,2 <span class="text-sm font-medium text-slate-500">mg/dL</span></p></div>
+              <div class="rounded-xl border border-line bg-white p-3"><p class="text-xs font-medium text-slate-500">Edad</p><p class="mt-1 text-xl font-semibold text-navy">62 <span class="text-sm font-medium text-slate-500">años</span></p></div>
+            </div>
+            <div class="mt-4 rounded-xl bg-navy p-4 text-white"><div class="flex items-center justify-between"><p class="text-sm text-slate-300">Resultado estimado</p><span class="rounded-full bg-white/15 px-2.5 py-1 text-xs font-semibold">Ejemplo</span></div><p class="mt-2 text-3xl font-bold">54 <span class="text-base font-medium text-slate-300">mL/min/1,73 m²</span></p><p class="mt-1 text-sm text-slate-300">Visualiza la categoría y sus notas de interpretación.</p></div>
+            <button type="button" data-calculator="CKD-EPI 2021" class="open-calculator mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-navy bg-white px-4 py-3 text-sm font-bold text-navy transition hover:bg-slate-50">Abrir calculadora <span class="material-symbols-rounded text-lg">arrow_forward</span></button>
+          </aside>
+        </div>
+      </section>
+
+      <section id="calculadoras" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><div><p class="text-sm font-bold tracking-wide text-teal">CATÁLOGO CLÍNICO</p><h2 class="mt-2 font-serif text-3xl font-bold text-navy sm:text-4xl">Encuentra la herramienta adecuada</h2><p class="mt-3 max-w-2xl leading-7 text-slate-600">Organizadas por área clínica y con la información necesaria para comprobar si el modelo se ajusta al caso.</p></div><p id="resultCount" class="text-sm font-medium text-slate-500">6 calculadoras destacadas</p></div>
+
+        <div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Filtrar calculadoras por especialidad">
+          <button class="filter category-active rounded-xl border px-4 py-2.5 text-sm font-semibold" type="button" data-filter="all">Todas</button>
+          <button class="filter rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 hover:border-teal" type="button" data-filter="nefrología">Nefrología</button>
+          <button class="filter rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 hover:border-teal" type="button" data-filter="cardiología">Cardiología</button>
+        </div>
+
+        <div id="calculatorGrid" class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="calculator-card rounded-2xl border border-line bg-white p-6" data-category="nefrología" data-search="ckd-epi 2021 filtrado glomerular creatinina riñón renal">
+            <div class="flex items-start justify-between"><span class="grid h-11 w-11 place-items-center rounded-xl bg-cyan-50 text-teal"><span class="material-symbols-rounded fill">water_drop</span></span><span class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-teal">Nefrología</span></div>
+            <h3 class="mt-5 text-xl font-bold text-navy">CKD-EPI 2021</h3><p class="mt-2 text-sm leading-6 text-slate-600">Estima el filtrado glomerular a partir de creatinina sérica.</p>
+            <div class="mt-5 flex items-center justify-between border-t border-line pt-4"><span class="text-xs font-medium text-slate-500">Ecuación de estimación</span><button type="button" data-calculator="CKD-EPI 2021" class="open-calculator inline-flex items-center gap-1 text-sm font-bold text-teal hover:underline">Calcular <span class="material-symbols-rounded text-lg">arrow_forward</span></button></div>
+          </article>
+          <article class="calculator-card rounded-2xl border border-line bg-white p-6" data-category="nefrología" data-search="kfre riesgo renal enfermedad renal crónica albuminuria">
+            <div class="flex items-start justify-between"><span class="grid h-11 w-11 place-items-center rounded-xl bg-cyan-50 text-teal"><span class="material-symbols-rounded fill">query_stats</span></span><span class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-teal">Nefrología</span></div>
+            <h3 class="mt-5 text-xl font-bold text-navy">KFRE · 4 variables</h3><p class="mt-2 text-sm leading-6 text-slate-600">Estima el riesgo renal con datos clínicos y analíticos definidos.</p>
+            <div class="mt-5 flex items-center justify-between border-t border-line pt-4"><span class="text-xs font-medium text-slate-500">Modelo de riesgo</span><button type="button" data-calculator="KFRE · 4 variables" class="open-calculator inline-flex items-center gap-1 text-sm font-bold text-teal hover:underline">Calcular <span class="material-symbols-rounded text-lg">arrow_forward</span></button></div>
+          </article>
+          <article class="calculator-card rounded-2xl border border-line bg-white p-6" data-category="nefrología" data-search="kdigo clasificación filtrado glomerular albuminuria enfermedad renal">
+            <div class="flex items-start justify-between"><span class="grid h-11 w-11 place-items-center rounded-xl bg-cyan-50 text-teal"><span class="material-symbols-rounded fill">account_tree</span></span><span class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-teal">Nefrología</span></div>
+            <h3 class="mt-5 text-xl font-bold text-navy">Clasificación KDIGO</h3><p class="mt-2 text-sm leading-6 text-slate-600">Relaciona filtrado glomerular y albuminuria por categorías.</p>
+            <div class="mt-5 flex items-center justify-between border-t border-line pt-4"><span class="text-xs font-medium text-slate-500">Algoritmo de clasificación</span><button type="button" data-calculator="Clasificación KDIGO" class="open-calculator inline-flex items-center gap-1 text-sm font-bold text-teal hover:underline">Consultar <span class="material-symbols-rounded text-lg">arrow_forward</span></button></div>
+          </article>
+          <article class="calculator-card rounded-2xl border border-line bg-white p-6" data-category="cardiología" data-search="cha2ds2-va fibrilación auricular embolia ictus riesgo cardio">
+            <div class="flex items-start justify-between"><span class="grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-rose-600"><span class="material-symbols-rounded fill">cardiology</span></span><span class="rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">Cardiología</span></div>
+            <h3 class="mt-5 text-xl font-bold text-navy">CHA₂DS₂-VA</h3><p class="mt-2 text-sm leading-6 text-slate-600">Puntuación para valorar riesgo en fibrilación auricular.</p>
+            <div class="mt-5 flex items-center justify-between border-t border-line pt-4"><span class="text-xs font-medium text-slate-500">Puntuación clínica</span><button type="button" data-calculator="CHA₂DS₂-VA" class="open-calculator inline-flex items-center gap-1 text-sm font-bold text-teal hover:underline">Calcular <span class="material-symbols-rounded text-lg">arrow_forward</span></button></div>
+          </article>
+          <article class="calculator-card rounded-2xl border border-line bg-white p-6" data-category="cardiología" data-search="has-bled fibrilación auricular sangrado hemorragia cardio">
+            <div class="flex items-start justify-between"><span class="grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-rose-600"><span class="material-symbols-rounded fill">health_and_safety</span></span><span class="rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">Cardiología</span></div>
+            <h3 class="mt-5 text-xl font-bold text-navy">HAS-BLED</h3><p class="mt-2 text-sm leading-6 text-slate-600">Puntuación de riesgo hemorrágico; revísala junto al contexto clínico.</p>
+            <div class="mt-5 flex items-center justify-between border-t border-line pt-4"><span class="text-xs font-medium text-slate-500">Puntuación clínica</span><button type="button" data-calculator="HAS-BLED" class="open-calculator inline-flex items-center gap-1 text-sm font-bold text-teal hover:underline">Calcular <span class="material-symbols-rounded text-lg">arrow_forward</span></button></div>
+          </article>
+          <article class="calculator-card rounded-2xl border border-line bg-white p-6" data-category="cardiología" data-search="score2 cardiovascular prevención primaria riesgo cardio">
+            <div class="flex items-start justify-between"><span class="grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-rose-600"><span class="material-symbols-rounded fill">monitor_heart</span></span><span class="rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">Cardiología</span></div>
+            <h3 class="mt-5 text-xl font-bold text-navy">SCORE2</h3><p class="mt-2 text-sm leading-6 text-slate-600">Estimación de riesgo cardiovascular en la población definida por el modelo.</p>
+            <div class="mt-5 flex items-center justify-between border-t border-line pt-4"><span class="text-xs font-medium text-slate-500">Modelo de riesgo</span><button type="button" data-calculator="SCORE2" class="open-calculator inline-flex items-center gap-1 text-sm font-bold text-teal hover:underline">Calcular <span class="material-symbols-rounded text-lg">arrow_forward</span></button></div>
+          </article>
+        </div>
+        <div id="emptyState" class="mt-8 hidden rounded-2xl border border-dashed border-line bg-white p-10 text-center"><span class="material-symbols-rounded text-3xl text-slate-400">search_off</span><p class="mt-3 font-semibold text-navy">No hemos encontrado una calculadora con ese término.</p><button id="clearSearch" type="button" class="mt-3 text-sm font-bold text-teal hover:underline">Ver todo el catálogo</button></div>
+      </section>
+
+      <section id="como-usar" class="border-y border-line bg-white py-16 lg:py-20">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8"><div class="max-w-2xl"><p class="text-sm font-bold tracking-wide text-teal">DISEÑADO PARA EL FLUJO CLÍNICO</p><h2 class="mt-2 font-serif text-3xl font-bold text-navy sm:text-4xl">De los datos al resultado, sin perder el contexto</h2></div>
+          <div class="mt-10 grid gap-8 md:grid-cols-3">
+            <div><span class="grid h-11 w-11 place-items-center rounded-xl bg-teal/10 text-teal"><span class="material-symbols-rounded">list_alt</span></span><p class="mt-5 text-sm font-bold text-teal">01</p><h3 class="mt-1 text-lg font-bold text-navy">Elige el modelo</h3><p class="mt-2 leading-7 text-slate-600">Consulta su finalidad, población de aplicación, versión y fuente antes de empezar.</p></div>
+            <div><span class="grid h-11 w-11 place-items-center rounded-xl bg-teal/10 text-teal"><span class="material-symbols-rounded">edit_note</span></span><p class="mt-5 text-sm font-bold text-teal">02</p><h3 class="mt-1 text-lg font-bold text-navy">Introduce los datos guiados</h3><p class="mt-2 leading-7 text-slate-600">Campos con unidades visibles, validación de límites y ayuda cuando la necesites.</p></div>
+            <div><span class="grid h-11 w-11 place-items-center rounded-xl bg-teal/10 text-teal"><span class="material-symbols-rounded">fact_check</span></span><p class="mt-5 text-sm font-bold text-teal">03</p><h3 class="mt-1 text-lg font-bold text-navy">Interpreta el resultado</h3><p class="mt-2 leading-7 text-slate-600">Visualiza valor, unidad, categoría y advertencias; nunca una recomendación automática.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="evidencia" class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:py-20">
+        <div><p class="text-sm font-bold tracking-wide text-teal">TRANSPARENCIA CLÍNICA</p><h2 class="mt-2 font-serif text-3xl font-bold text-navy sm:text-4xl">Cada resultado debe poder entenderse y comprobarse</h2><p class="mt-5 leading-7 text-slate-600">MED-CALC presenta la versión y el uso previsto de cada modelo, junto a su fuente y sus límites. Las fórmulas se verifican con casos de referencia antes de incorporarse al catálogo.</p><a href="#calculadoras" class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-teal hover:underline">Ver calculadoras documentadas <span class="material-symbols-rounded text-lg">arrow_forward</span></a></div>
+        <div class="grid gap-4 sm:grid-cols-2"><div class="rounded-2xl border border-line bg-white p-5"><span class="material-symbols-rounded text-2xl text-teal">menu_book</span><h3 class="mt-4 font-bold text-navy">Fuentes y versiones</h3><p class="mt-2 text-sm leading-6 text-slate-600">La ficha de cada herramienta identifica el modelo y su procedencia.</p></div><div class="rounded-2xl border border-line bg-white p-5"><span class="material-symbols-rounded text-2xl text-teal">rule</span><h3 class="mt-4 font-bold text-navy">Límites visibles</h3><p class="mt-2 text-sm leading-6 text-slate-600">Los formularios bloquean entradas fuera del dominio permitido.</p></div><div class="rounded-2xl border border-line bg-white p-5"><span class="material-symbols-rounded text-2xl text-teal">swap_horiz</span><h3 class="mt-4 font-bold text-navy">Unidades claras</h3><p class="mt-2 text-sm leading-6 text-slate-600">Las conversiones se muestran y se validan de forma explícita.</p></div><div class="rounded-2xl border border-line bg-white p-5"><span class="material-symbols-rounded text-2xl text-teal">privacy_tip</span><h3 class="mt-4 font-bold text-navy">Datos mínimos</h3><p class="mt-2 text-sm leading-6 text-slate-600">No guarda información clínica identificativa en esta propuesta.</p></div></div>
+      </section>
+
+      <section class="mx-5 mb-10 rounded-3xl bg-navy px-6 py-10 text-white sm:mx-8 sm:px-10 lg:mx-auto lg:max-w-7xl lg:px-14"><div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"><div><h2 class="font-serif text-3xl font-bold">Empieza por la calculadora que necesitas.</h2><p class="mt-2 text-slate-300">Accede a la ficha, revisa su aplicabilidad y calcula con los datos necesarios.</p></div><a href="#calculadoras" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-navy transition hover:bg-slate-100">Explorar calculadoras <span class="material-symbols-rounded text-lg">arrow_forward</span></a></div></section>
+    </main>
+
+    <footer class="border-t border-line bg-white"><div class="mx-auto max-w-7xl px-5 py-8 sm:px-8"><div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between"><div class="flex items-center gap-3"><span class="grid h-9 w-9 place-items-center rounded-lg bg-navy text-white"><span class="material-symbols-rounded fill text-lg">vital_signs</span></span><div><p class="font-bold text-navy">MED-CALC</p><p class="text-xs text-slate-500">Prototipo académico de apoyo clínico</p></div></div><p class="max-w-lg text-sm leading-6 text-slate-500">Esta herramienta no sustituye el juicio clínico, la bibliografía actualizada ni los protocolos asistenciales. No introduzcas datos identificativos de pacientes.</p></div><div class="mt-7 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5 text-xs text-slate-500"><span>© 2026 MED-CALC</span><a class="hover:text-navy" href="#evidencia">Fuentes y versiones</a><a class="hover:text-navy" href="#calculadoras">Catálogo</a></div></div></footer>
+
+    <dialog id="calculatorDialog" class="w-[calc(100%-2rem)] max-w-lg rounded-2xl border-0 p-0 shadow-2xl backdrop:bg-navy/40">
+      <div class="p-6 sm:p-7"><div class="flex items-start justify-between gap-4"><div><p class="text-sm font-bold text-teal">VISTA PREVIA</p><h2 id="dialogTitle" class="mt-1 text-2xl font-bold text-navy">Calculadora</h2></div><button id="closeDialog" type="button" class="grid h-10 w-10 place-items-center rounded-xl text-slate-500 hover:bg-slate-100" aria-label="Cerrar vista previa"><span class="material-symbols-rounded">close</span></button></div><p class="mt-5 leading-7 text-slate-600">En la aplicación final, esta vista abriría la ficha del modelo: finalidad, población, variables necesarias, unidades, referencia y advertencias antes del formulario.</p><div class="mt-5 rounded-xl bg-[#f7fbfb] p-4"><p class="text-sm font-semibold text-navy">Antes de calcular</p><p class="mt-1 text-sm leading-6 text-slate-600">Comprueba que el modelo es aplicable a la persona y al contexto clínico correspondiente.</p></div><button id="dialogAction" type="button" class="mt-6 w-full rounded-xl bg-navy px-4 py-3 text-sm font-bold text-white hover:bg-[#0c293e]">Ver ficha y formulario</button></div>
+    </dialog>
+
+    <script>
+      const searchInput = document.getElementById('search');
+      const cards = [...document.querySelectorAll('.calculator-card')];
+      const filters = [...document.querySelectorAll('.filter')];
+      const count = document.getElementById('resultCount');
+      const emptyState = document.getElementById('emptyState');
+      let activeFilter = 'all';
+
+      function updateCatalog() {
+        const query = searchInput.value.toLocaleLowerCase('es').trim();
+        let visible = 0;
+        cards.forEach((card) => {
+          const matchesSearch = card.dataset.search.includes(query);
+          const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+          const show = matchesSearch && matchesFilter;
+          card.classList.toggle('hidden', !show);
+          if (show) visible += 1;
+        });
+        count.textContent = `${visible} ${visible === 1 ? 'calculadora disponible' : 'calculadoras disponibles'}`;
+        emptyState.classList.toggle('hidden', visible !== 0);
+      }
+
+      searchInput.addEventListener('input', updateCatalog);
+      document.getElementById('searchButton').addEventListener('click', () => {
+        document.getElementById('calculadoras').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        updateCatalog();
+      });
+      document.querySelectorAll('.quick-search').forEach((button) => button.addEventListener('click', () => {
+        searchInput.value = button.dataset.query;
+        updateCatalog();
+        document.getElementById('calculadoras').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }));
+      filters.forEach((button) => button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filters.forEach((item) => item.classList.toggle('category-active', item === button));
+        updateCatalog();
+      }));
+      document.getElementById('clearSearch').addEventListener('click', () => { searchInput.value = ''; activeFilter = 'all'; filters.forEach((item, index) => item.classList.toggle('category-active', index === 0)); updateCatalog(); });
+
+      const dialog = document.getElementById('calculatorDialog');
+      const dialogTitle = document.getElementById('dialogTitle');
+      document.querySelectorAll('.open-calculator').forEach((button) => button.addEventListener('click', () => { dialogTitle.textContent = button.dataset.calculator; dialog.showModal(); }));
+      document.getElementById('closeDialog').addEventListener('click', () => dialog.close());
+      document.getElementById('dialogAction').addEventListener('click', () => dialog.close());
+    </script>
+  </body>
+</html>

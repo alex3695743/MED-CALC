@@ -1,0 +1,2042 @@
+[
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": null,
+    "expected_value": "128.528769146202178513497894937378207747080905747379053517367",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-001"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": null,
+    "expected_value": "128.484494516838915698969970353914858000409610458628779242708",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-002"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": null,
+    "expected_value": "128.264580978243640717601912926996625179839460106351206851265",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-003"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.799",
+    "expected_value": "115.400238285601771336912190097235278861024400586750324858542",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-004"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.8",
+    "expected_value": "115.328234833844938677303267080333082925103721469400492015616",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-005"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.801",
+    "expected_value": "115.137068130568901492756083443558481936879566340594732653632",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-006"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "121.261909500142178407215839846544699848923920185416138531282",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-007"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "121.212929273707351280410486117633524250647648425562607771617",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-008"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "121.095180542218584358742721719362790886417582618136015035072",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-009"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "121.223950663840234848343992031968416976683983202128505778193",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-010"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "121.174985769774862694961656751685242956535093042358369251691",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-011"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "121.057273897385888675449140662829746842580946441768324633206",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-012"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "121.129846109087654796768108229402581571152922541741970691013",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-013"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "121.080919225824020220789305357438903097503312490693154367774",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-014"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "120.963298731609735249213866141254144506793425084409258046731",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-015"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": null,
+    "expected_value": "97.7588343604585498208092366096862976998022219210734664106800",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-016"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": null,
+    "expected_value": "97.7251591281580637595627889216372331581332369306836043597276",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-017"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": null,
+    "expected_value": "97.5578931429940485041630974188421555447819997240203802683397",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-018"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.799",
+    "expected_value": "96.7425646164136176563379099402501698042548348131401427403795",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-019"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.8",
+    "expected_value": "96.6822025349510934039754550944288970100272406912236821065676",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-020"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.801",
+    "expected_value": "96.5219432718946474828484606986920725786338399054204989078541",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-021"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "102.106588719484651502841076845899226662069402106062067898704",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-022"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "102.065345728535690241661465385463932068394339399780230735145",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-023"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "101.966197353354030588010749919734216706912486532692875830610",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-024"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "102.074626108121119822021184776141477041245481171158682759499",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-025"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "102.033396027540702875449892118478859231546156293454084803910",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-026"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "101.934278688955437243530507010145068556929107741736065351989",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-027"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "101.995386921567318688426679526072363350483401202258728479855",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-028"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "101.954188847354902339255576041055151059159150068581046140044",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-029"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "101.855148452252873715906409606985753026847920056068301649039",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-030"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": null,
+    "expected_value": "77.1823017605338497257863194465195551654482452744587152595584",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-031"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": null,
+    "expected_value": "77.1557145783290311357246168103441176164973175711749240609505",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-032"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": null,
+    "expected_value": "77.0236551708528734216630466410734692178107025635219269857363",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-033"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.799",
+    "expected_value": "83.0754029230007750430268992996668462393487230264838234989420",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-034"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.8",
+    "expected_value": "83.0235684046721240139881913463838469313772313977561571477998",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-035"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.801",
+    "expected_value": "82.8859495302568535094592941231860395485429537394201707402584",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-036"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "88.0167829409333814217615048017573945076795958090288654245240",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-037"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "87.9812311178070361137301077608181129459540607611295138200632",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-038"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.699",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "87.8957643411107241185696600583286949036376811087983295010858",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-039"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "87.9892308871248054378345451803188958342675169537555637443120",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-040"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "87.9536901928503795118787177510356371627575921192708274336536",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-041"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.7",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "87.8682501699747787621381230364029081017585726437813560065225",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-042"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "87.9209260071872079866860196876409919772900987901458135599839",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-043"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "87.8854129026851989570769748496804587963862593956581767889689",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-044"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.701",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "87.8000392057729637701625512893359007620361834384064529892680",
+    "expected_category": "G2",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-045"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.1",
+    "cystatin_mg_l": null,
+    "expected_value": "156.197836413876380422875715435659473590796251236034084101210",
+    "expected_category": "G1",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-046"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "16",
+    "cystatin_mg_l": null,
+    "expected_value": "2.28654659128134072287453525482548612381727180978311791915001",
+    "expected_category": "G5",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-047"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.1",
+    "expected_value": "272.890513850246256711796505179473737800410605693571819798734",
+    "expected_category": "G1",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-048"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "9",
+    "expected_value": "3.88522331081921995239134141259367196943799597248192597554051",
+    "expected_category": "G5",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-049"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "0.1",
+    "cystatin_mg_l": "0.1",
+    "expected_value": "305.855911112560520879030678462838504747648379343117662026775",
+    "expected_category": "G1",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-050"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "F",
+    "creatinine_mg_dl": "16",
+    "cystatin_mg_l": "9",
+    "expected_value": "2.82903123493733085773115281780340409911065146766002659619311",
+    "expected_category": "G5",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-051"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": null,
+    "expected_value": "127.003596259837889053823308315376407788551593692826362594008",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-052"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": null,
+    "expected_value": "126.960962961303276382381393630350650198033211915641086208209",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-053"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": null,
+    "expected_value": "126.791888331773631959860546631421146922413323700909950031785",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-054"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.799",
+    "expected_value": "123.819998160516922035313508688020685473202146552307215513457",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-055"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.8",
+    "expected_value": "123.742741238031050082943419614091290692171374967167909888000",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-056"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.801",
+    "expected_value": "123.537626749537447953600947900813821820686229979178897697030",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-057"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "125.901722567884225418427479312896629162015584751739595711463",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-058"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "125.850868223718529070084771605143776212309025157660547716400",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-059"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "125.728614102983265171127698516515629511419261990444702500221",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-060"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "125.881568705960783850824498475564295925943907790372280143503",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-061"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "125.830722502362266557592582296661726849984520293207029337166",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-062"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "125.708487951594899974505857386116040334975022265595352682457",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-063"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "125.805545496614435712044465484109129559048307542696134939805",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-064"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "125.754730000383330293782884746305245655808450476364228691427",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-065"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "125.632569270294700647187552930291564464505931023489754999597",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-066"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": null,
+    "expected_value": "96.5987896128149465868707588538941052160040974170153242533461",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-067"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": null,
+    "expected_value": "96.5663627748597467979869455747403489704873882714264865214700",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-068"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": null,
+    "expected_value": "96.4377648056070956682244086910334309929894903629987969113321",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-069"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.799",
+    "expected_value": "103.801034996151950275040675901555976184822784134270539421008",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-070"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.8",
+    "expected_value": "103.736268814325207514995123491876498937797468552815109556403",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-071"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.801",
+    "expected_value": "103.564316815337604595330966414905657273212274576631436596410",
+    "expected_category": "G1",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-072"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "106.013466704468650941214107316149551465336447876228518833772",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-073"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "105.970645643628273917194298870991527917752971805800758822747",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-074"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "105.867703579820816099490929790420160418248700329794245700798",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-075"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "105.996496477799709057135186683428325068790738495491882408618",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-076"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "105.953682271589514927777665751276073968376070917397803534694",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-077"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "105.850756686350402122046217040649084690476747395364553844225",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-078"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "105.932482389601190712241689580254636194899825614242798497864",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-079"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "105.889694040022711414549339997615974814396884875568330834196",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-080"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "105.786830614267263813201690037193881397284349660417180656783",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-081"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": null,
+    "expected_value": "76.2664262352773214036948272476954326023073441311651121012627",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-082"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": null,
+    "expected_value": "76.2408246821433113989373683896681004115586142007657352380934",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-083"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": null,
+    "expected_value": "76.1392943464597608401751121894578371476486662151791526482522",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de creatinina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-084"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.799",
+    "expected_value": "89.1366984152368830933765013944923242911466985262701968872768",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-085"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.8",
+    "expected_value": "89.0810819792619356373263855647895353340957418430860055233903",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-086"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.801",
+    "expected_value": "88.9334222427648642805357233081395274125997357719100544423373",
+    "expected_category": "G2",
+    "purpose": "punto de cambio de cistatina",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-087"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "91.3845463330270805547114077741441400312234015667166349308089",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-088"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "91.3476341996911761809000567166999790339614046471028212109232",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-089"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.899",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "91.2588972298319165504708069762455707035028221637780925496865",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-090"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "91.3699178474816255844595484738513975433722917484481451135119",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-091"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "91.3330116228975903550142448089674321523962534987236006579996",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-092"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.9",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "91.2442888577100506356574486359324071669351740849235264865239",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-093"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.799",
+    "expected_value": "91.3147371370417754140448862274332515631457556208498887269991",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-094"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.8",
+    "expected_value": "91.2778532011030643399277204203796627077380101965704748220335",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-095"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.901",
+    "cystatin_mg_l": "0.801",
+    "expected_value": "91.1891840179404467474748109722462357848145121522534543767425",
+    "expected_category": "G1",
+    "purpose": "combinación de ramas",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-096"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.1",
+    "cystatin_mg_l": null,
+    "expected_value": "187.502521157603960232153984703853813155884113620219339070939",
+    "expected_category": "G1",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-097"
+  },
+  {
+    "method": "creatinine",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "16",
+    "cystatin_mg_l": null,
+    "expected_value": "3.05473053350511480953230956619191980152617488862685754427245",
+    "expected_category": "G5",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-098"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.1",
+    "expected_value": "292.800980526015296901069211565958946137779619842888218668169",
+    "expected_category": "G1",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-099"
+  },
+  {
+    "method": "cystatin",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "9",
+    "expected_value": "4.16869453950560080728684700922067807879613301768446993083746",
+    "expected_category": "G5",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-100"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "0.1",
+    "cystatin_mg_l": "0.1",
+    "expected_value": "284.593542601322190164155279628723572824044612911336285876305",
+    "expected_category": "G1",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-101"
+  },
+  {
+    "method": "combined",
+    "age": 62,
+    "sex": "M",
+    "creatinine_mg_dl": "16",
+    "cystatin_mg_l": "9",
+    "expected_value": "3.36810829314250069097107608498365621607168055714178731597640",
+    "expected_category": "G5",
+    "purpose": "extremo matemático",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "id": "N1-REF-102"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.6",
+    "cystatin_mg_l": null,
+    "expected_value": "133.347505715095240948195325324343592054149182084877403936348",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-LL",
+    "id": "N1-REF-103"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.7",
+    "expected_value": "123.274606948022427091021722952690730556634103201347321052646",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-LL",
+    "id": "N1-REF-104"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.6",
+    "cystatin_mg_l": "0.7",
+    "expected_value": "130.859640600623435336038401967038234704230459124786124655006",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-LL",
+    "id": "N1-REF-105"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.6",
+    "cystatin_mg_l": null,
+    "expected_value": "80.0759821593693935173067492272796350220286466420671998767233",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-LH",
+    "id": "N1-REF-106"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.9",
+    "expected_value": "71.0020431096575666748187949434840525524132375557980634359384",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-LH",
+    "id": "N1-REF-107"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.6",
+    "cystatin_mg_l": "0.9",
+    "expected_value": "83.0077706160293568267937804716040766301169925631568094953670",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-LH",
+    "id": "N1-REF-108"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": null,
+    "expected_value": "109.461245109199584867870672222920155600175484785802220233161",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-HL",
+    "id": "N1-REF-109"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.7",
+    "expected_value": "123.274606948022427091021722952690730556634103201347321052646",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-HL",
+    "id": "N1-REF-110"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "F",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": "0.7",
+    "expected_value": "117.651307257910178870741568377430459743352253176116051751469",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-HL",
+    "id": "N1-REF-111"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": null,
+    "expected_value": "65.7321384715963515073127852727292201554826502018081575166851",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-HH",
+    "id": "N1-REF-112"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.9",
+    "expected_value": "71.0020431096575666748187949434840525524132375557980634359384",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-HH",
+    "id": "N1-REF-113"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "F",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": "0.9",
+    "expected_value": "74.6293714449806563278773218825499293805922700177213226974844",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-F-HH",
+    "id": "N1-REF-114"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": null,
+    "expected_value": "131.558305044256444697595837253808999795450189171584375974103",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-LL",
+    "id": "N1-REF-115"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.7",
+    "expected_value": "132.268891575131359539722878704603788150894960516467082674513",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-LL",
+    "id": "N1-REF-116"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": "0.7",
+    "expected_value": "133.623872087781139176850089274259699544719592527948226163111",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-LL",
+    "id": "N1-REF-117"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": null,
+    "expected_value": "79.0015563556822347640298713438554186224362832675716459938785",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-LH",
+    "id": "N1-REF-118"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.9",
+    "expected_value": "76.1824496884737839858570761196180821377824437293970637724661",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-LH",
+    "id": "N1-REF-119"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "0.8",
+    "cystatin_mg_l": "0.9",
+    "expected_value": "84.7611965933776335389868791884119386383571584108799251903613",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-LH",
+    "id": "N1-REF-120"
+  },
+  {
+    "method": "creatinine",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "1.0",
+    "cystatin_mg_l": null,
+    "expected_value": "111.882257070599459947312951776791289395698685115113792431485",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-HL",
+    "id": "N1-REF-121"
+  },
+  {
+    "method": "cystatin",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.7",
+    "expected_value": "132.268891575131359539722878704603788150894960516467082674513",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-HL",
+    "id": "N1-REF-122"
+  },
+  {
+    "method": "combined",
+    "age": 18,
+    "sex": "M",
+    "creatinine_mg_dl": "1.0",
+    "cystatin_mg_l": "0.7",
+    "expected_value": "124.058353887936818282927075979588021624644808119181907495999",
+    "expected_category": "G1",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-HL",
+    "id": "N1-REF-123"
+  },
+  {
+    "method": "creatinine",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "1.0",
+    "cystatin_mg_l": null,
+    "expected_value": "67.1859707693138659251156341792006261991599647980855343427397",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-HH",
+    "id": "N1-REF-124"
+  },
+  {
+    "method": "cystatin",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": null,
+    "cystatin_mg_l": "0.9",
+    "expected_value": "76.1824496884737839858570761196180821377824437293970637724661",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2012",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-HH",
+    "id": "N1-REF-125"
+  },
+  {
+    "method": "combined",
+    "age": 100,
+    "sex": "M",
+    "creatinine_mg_dl": "1.0",
+    "cystatin_mg_l": "0.9",
+    "expected_value": "78.6935325151962308862541314479805104134688271278049721028332",
+    "expected_category": "G2",
+    "purpose": "contraste externo NKF",
+    "source_ids": [
+      "NIDDK-ADULTS",
+      "INKER-2021",
+      "KDIGO-2024"
+    ],
+    "external_evidence": "NKF-M-HH",
+    "id": "N1-REF-126"
+  }
+]

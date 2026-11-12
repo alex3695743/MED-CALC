@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --color-ink: #182734;
+  --color-navy: #12334d;
+  --color-teal: #08717d;
+  --color-mist: #f4f8f8;
+  --color-line: #d9e3e5;
+  --color-aqua: #e9f5f3;
+  --shadow-card: 0 4px 16px rgb(18 51 77 / 4%);
+}
+
+@layer base {
+  body {
+    @apply bg-mist font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-teal;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}

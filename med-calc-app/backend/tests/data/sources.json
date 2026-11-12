@@ -1,0 +1,71 @@
+{
+  "reference_set_version": "1.0.2",
+  "access_date": "2026-11-12",
+  "module": "N1-eGFR-CKD-EPI",
+  "review": {
+    "performed_by": "Codex con comprobación documental y contraste externo NKF",
+    "clinical_signoff": "pendiente de Tomeu",
+    "software_review": "pendiente de Kevin"
+  },
+  "sources": [
+    {
+      "id": "INKER-2021",
+      "doi": "10.1056/NEJMoa2102953",
+      "pmid": "34554658",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8822996/",
+      "locator": "Table 2, ecuaciones nuevas AS de creatinina y creatinina-cistatina",
+      "role": "publicación original de las ecuaciones de 2021",
+      "cross_source_note": "La fila histórica de eGFRcys 2012 en Table 2 imprime 0.9962 para la edad. NIDDK y la página específica de NKF publican 0.996; los ocho contrastes externos concuerdan con esta última forma operativa. La especificación actual adopta 0.996. La revisión clínica de esta diferencia documental queda pendiente."
+    },
+    {
+      "id": "INKER-2012",
+      "doi": "10.1056/NEJMoa1114248",
+      "pmid": "22762315",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4398023/",
+      "role": "publicación original de eGFRcys 2012; fórmula contrastada con NIDDK",
+      "access_note": "El acceso web al artículo devolvió una comprobación de navegador en esta sesión; revisar también las correcciones indicadas en la bibliografía de NIDDK."
+    },
+    {
+      "id": "NIDDK-ADULTS",
+      "url": "https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/glomerular-filtration-rate-equations/adults",
+      "locator": "Table 1; Table 2; apartado 2012 CKD-EPI Cystatin C Equation",
+      "role": "referencia operativa para transcribir las tres ecuaciones, sus tramos y unidades"
+    },
+    {
+      "id": "NKF-CYS-2012",
+      "url": "https://www.kidney.org/professionals/ckd-epi-cystatin-c-equation-2012",
+      "locator": "fórmula de la cabecera, coeficiente de edad 0.996",
+      "role": "segundo contraste documental de eGFRcys 2012"
+    },
+    {
+      "id": "NKF-CALCULATOR",
+      "url": "https://www.kidney.org/professionals/gfr_calculator",
+      "role": "ocho observaciones externas y 24 resultados enteros, con captura y lectura de campos",
+      "settings": "mg/dL; mg/L; Standardized Assays Yes; BSA adjustment No",
+      "resolution": "1 mL/min/1.73 m²",
+      "evidence": "evidence/nkf-observed.json"
+    },
+    {
+      "id": "KDIGO-2024",
+      "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+      "locator": "Table 2, página impresa S137, página 22 del PDF",
+      "role": "categorías G1, G2, G3a, G3b, G4, G5 aplicadas antes del redondeo"
+    }
+  ],
+  "acceptance": {
+    "raw_absolute_tolerance": 1e-8,
+    "raw_relative_tolerance": 1e-10,
+    "raw_rule": "abs(actual-reference) <= absolute + relative * abs(reference)",
+    "raw_justification": "Tolerancia de ingeniería elegida para diferencias de aritmética binaria de doble precisión frente a Decimal 60. Se comprobará el error observado y se mantendrá versionada.",
+    "nkf_resolution": "1; intervalo de redondeo de semianchura 0.5 más tolerancia binaria",
+    "category": "coincidencia exacta del código sobre el valor completo",
+    "invalid": "HTTP 422; comprobar también la ausencia de resultados numéricos"
+  },
+  "pending_criteria": [
+    {"id": "CYS-AGE-COEFFICIENT", "description": "Revisar con Tomeu la diferencia 0.9962 en la fila histórica de la tabla de 2021 frente a 0.996 en NIDDK y NKF. La referencia operativa actual usa 0.996 y concuerda con la calculadora externa.", "status": "pendiente de revisión documental del tutor"},
+    {"id": "AGE-MAX", "description": "Acordar máximo de edad. La API actual exige un mínimo de 18 años y admite edades superiores a las clínicamente plausibles.", "status": "pendiente de decisión clínica y ficha"},
+    {"id": "UNITS", "description": "La interfaz y la API actuales admiten creatinina en mg/dL. El soporte µmol/L y su conversión 88.4 están pendientes de implementación.", "status": "pendiente de implementación"},
+    {"id": "PLAUSIBILITY", "description": "Acordar avisos de plausibilidad propuestos por Tomeu y sus límites exactos.", "status": "pendiente de decisión clínica y ficha"},
+    {"id": "DISCREPANCY", "description": "Acordar la regla y el aviso por discrepancia entre estimaciones.", "status": "pendiente de decisión clínica y ficha"}
+  ]
+}

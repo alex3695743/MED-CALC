@@ -1,0 +1,129 @@
+{
+  "source": "https://www.kidney.org/professionals/gfr_calculator",
+  "access_date": "2026-11-12",
+  "assays": "standardized",
+  "bsa_adjustment": false,
+  "synthetic_cases": true,
+  "cases": [
+    {
+      "id": "NKF-F-LL",
+      "sex": "Female",
+      "age": 18,
+      "cr": "0.6",
+      "cy": "0.7",
+      "observed": {
+        "age": "18",
+        "result_1": "133",
+        "result_2": "131",
+        "result_3": "123",
+        "scr": "0.6",
+        "scys": "0.7"
+      }
+    },
+    {
+      "id": "NKF-F-LH",
+      "sex": "Female",
+      "age": 100,
+      "cr": "0.6",
+      "cy": "0.9",
+      "observed": {
+        "age": "100",
+        "result_1": "80",
+        "result_2": "83",
+        "result_3": "71",
+        "scr": "0.6",
+        "scys": "0.9"
+      }
+    },
+    {
+      "id": "NKF-F-HL",
+      "sex": "Female",
+      "age": 18,
+      "cr": "0.8",
+      "cy": "0.7",
+      "observed": {
+        "age": "18",
+        "result_1": "109",
+        "result_2": "118",
+        "result_3": "123",
+        "scr": "0.8",
+        "scys": "0.7"
+      }
+    },
+    {
+      "id": "NKF-F-HH",
+      "sex": "Female",
+      "age": 100,
+      "cr": "0.8",
+      "cy": "0.9",
+      "observed": {
+        "age": "100",
+        "result_1": "66",
+        "result_2": "75",
+        "result_3": "71",
+        "scr": "0.8",
+        "scys": "0.9"
+      }
+    },
+    {
+      "id": "NKF-M-LL",
+      "sex": "Male",
+      "age": 18,
+      "cr": "0.8",
+      "cy": "0.7",
+      "observed": {
+        "age": "18",
+        "result_1": "132",
+        "result_2": "134",
+        "result_3": "132",
+        "scr": "0.8",
+        "scys": "0.7"
+      }
+    },
+    {
+      "id": "NKF-M-LH",
+      "sex": "Male",
+      "age": 100,
+      "cr": "0.8",
+      "cy": "0.9",
+      "observed": {
+        "age": "100",
+        "result_1": "79",
+        "result_2": "85",
+        "result_3": "76",
+        "scr": "0.8",
+        "scys": "0.9"
+      }
+    },
+    {
+      "id": "NKF-M-HL",
+      "sex": "Male",
+      "age": 18,
+      "cr": "1.0",
+      "cy": "0.7",
+      "observed": {
+        "age": "18",
+        "result_1": "112",
+        "result_2": "124",
+        "result_3": "132",
+        "scr": "1.0",
+        "scys": "0.7"
+      }
+    },
+    {
+      "id": "NKF-M-HH",
+      "sex": "Male",
+      "age": 100,
+      "cr": "1.0",
+      "cy": "0.9",
+      "observed": {
+        "age": "100",
+        "result_1": "67",
+        "result_2": "79",
+        "result_3": "76",
+        "scr": "1.0",
+        "scys": "0.9"
+      }
+    }
+  ]
+}

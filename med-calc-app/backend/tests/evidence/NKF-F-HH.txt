@@ -1,0 +1,379 @@
+Browser tab: 1, Title: "eGFR Calculator | National Kidney Foundation", URL: "https://www.kidney.org/professionals/gfr_calculator".
+0 AXWebArea eGFR Calculator | National Kidney Foundation, URL: kidney.org/professionals/gfr_calculator
+	1 container
+		2 link Description: Skip to main content, Value: kidney.org/professionals/gfr_calculator#main-content
+		3 container main-menu
+			4 container main-menu-top
+				5 link Description: Home, Value: kidney.org/
+				6 content list
+					7 container searchLinkIcon
+						8 container searchBarTrigger
+							9 image
+							10 button Search
+					11 container
+						12 image
+						13 link Description: Member Login, Value: nationalkidneyfoundation.wildapricot.org/sys/login
+					14 link Description: Español, Value: kidney.org/es/profesionales/calculadora-tfg, ID: language-switcher
+				15 button Donate, ID: classy-modal-trigger-header
+			16 container NKF Mega Menu, ID: block-nephron-nkfmegamenu
+				17 heading NKF Mega Menu, Value: 2, ID: block-nephron-nkfmegamenu-menu
+					18 text NKF Mega Menu
+				19 content list
+					20 link Description: Kidney Health, Value: kidney.org/professionals/gfr_calculator#
+					21 link Description: Treatment & Support, Value: kidney.org/professionals/gfr_calculator#
+					22 link Description: Transplantation, Value: kidney.org/professionals/gfr_calculator#
+					23 link Description: For Professionals, Value: kidney.org/professionals/gfr_calculator#
+					24 link Description: Take Action, Value: kidney.org/professionals/gfr_calculator#
+					25 link Description: Ways to Give, Value: kidney.org/professionals/gfr_calculator#
+					26 link Description: About NKF, Value: kidney.org/professionals/gfr_calculator#
+		27 container Breadcrumb
+			28 heading Breadcrumb, Value: 2, ID: system-breadcrumb
+				29 text Breadcrumb
+			30 content list
+				31 container
+					32 link Description: Home, Value: kidney.org/
+				33 container
+					34 link Description: Kidney Professionals, Value: kidney.org/professionals
+				35 text EGFR Calculator
+		36 heading eGFR Calculator, Value: 1
+			37 text eGFR Calculator
+		359 button Back to Top, Help: Go to top, ID: back-to-top
+		38 container
+			39 text Glomerular filtration rate (GFR) is the best overall index of kidney function. Normal GFR varies according to age, sex, and body size, and declines with age. The National Kidney Foundation (NKF) and the American Society of Nephrology (ASN) convened a Task Force in 2021 to focus on 
+			40 link Description: eliminating the use of race when estimating GFR, Value: kidney.org/laboratory-implementation-nkf-asn-task-force-reassessing-inclusion-race-diagnosing-kidney-diseases
+			41 text . The joint NKF/ASN Task Force recommends using the race-free CKD-EPI equations to estimate GFR. More information regarding this recommendation may be found in this 
+			42 link Description: article highlighting the Task Force’s recommendations, Help: (opens in a new window), Value: ajkd.org/article/S0272-63862100828-3/fulltext
+			43 text .
+			44 text This eGFR Calculator is intended for use only by health care professionals.
+			45 text  If you are a patient interested in learning more about your kidney health, please check out the following resources and refer specific questions to your healthcare provider.
+			46 content list
+				47 container
+					48 AXListMarker • 
+					49 link Description: Kidney Tests, Value: kidney.org/kidney-topics/tests-to-check-your-kidney-health?utm_source=web&utm_campaign=eGFR-calculator
+				50 container
+					51 AXListMarker • 
+					52 link Description: Estimated Glomerular Filtration Rate (eGFR), Value: kidney.org/kidney-topics/estimated-glomerular-filtration-rate-egfr?utm_source=web&utm_campaign=eGFR-calculator
+				53 container
+					54 AXListMarker • 
+					55 link Description: Serum Creatinine, Value: kidney.org/kidney-topics/creatinine?utm_source=web&utm_campaign=eGFR-calculator
+				56 container
+					57 AXListMarker • 
+					58 link Description: Cystatin C, Value: kidney.org/kidney-topics/cystatin-c?utm_source=web&utm_campaign=eGFR-calculator
+			59 text This calculator estimates GFR using serum creatinine and/or cystatin C; both biomarkers are not required. The results displayed will depend on which value(s) you enter.
+			60 text For persons under 18 years of age, use the 
+			61 link Description: pediatric eGFR calculator, Value: kidney.org/professionals/gfr_calculatorPed
+			62 text .
+			63 container block-nephron-egfrcalculator
+				64 container form-gfr-equation-2021
+					65 table calcTable
+						66 container
+							67 row
+								68 cell
+									69 text Serum Creatinine:
+								70 cell
+									71 text field (settable) Value: 0.8, ID: scr
+								72 cell
+									73 container
+										74 radio button (settable, integer) Description: mg/dL, Value: 1
+										75 text mg/dL
+									76 container
+										77 radio button (settable, integer) Description: μmol/L, Value: 0
+										78 text μmol/L
+							79 row
+								80 cell
+									81 text Serum Cystatin C:
+								82 cell
+									83 text field (settable) Value: 0.9, ID: scys
+								84 cell
+									85 text mg/L
+							86 row
+								87 cell
+									88 text Age:
+								89 cell
+									90 text field (settable) Value: 100, ID: age
+								91 cell
+									92 text Years
+							93 row
+								94 cell
+									95 text Sex:
+								96 cell
+									97 container
+										98 radio button (settable, integer) Description: Male, Value: 0
+										99 text Male
+									100 container
+										101 radio button (settable, integer) Description: Female, Value: 1
+										102 text Female
+							103 row
+								104 cell
+									105 text Standardized Assays:
+								106 cell
+									107 container
+										108 radio button (settable, integer) Description: Yes, Value: 1
+										109 text Yes
+									110 container
+										111 radio button (settable, integer) Description: No, Value: 0
+										112 text No
+									113 container
+										114 radio button (settable, integer) Description: Not Sure, Value: 0
+										115 text Not Sure
+							116 row
+								117 cell
+									118 text Adjust eGFR for body surface area (for medication-related decision making, using Dubois Method):
+								119 cell
+									120 container
+										121 radio button (settable, integer) Description: Yes, Value: 0
+										122 text Yes
+									123 container
+										124 radio button (settable, integer) Description: No, Value: 1
+										125 text No
+									126 container
+										127 radio button (settable, integer) Description: Not Sure, Value: 0
+										128 text Not Sure
+					129 button Calculate
+				130 heading Results, Value: 2
+					131 text Results
+				132 table results
+					133 container
+						134 row
+							135 cell
+								136 text CKD-EPI creatinine equation (2021)
+							360 cell
+								361 text field (disabled) Value: 66, ID: result_1
+							137 cell
+								138 container result_1_output
+									382 text mL/min/1.73m
+									383 text 2
+						141 row
+							142 cell
+								143 text CKD-EPI creatinine-cystatin equation (2021)
+							364 cell
+								365 text field (disabled) Value: 75, ID: result_2
+							144 cell
+								145 container result_2_output
+									384 text mL/min/1.73m
+									385 text 2
+						148 row
+							149 cell
+								150 text CKD-EPI cystatin C equation (2012)
+							368 cell
+								369 text field (disabled) Value: 71, ID: result_3
+							151 cell
+								152 container result_3_output
+									386 text mL/min/1.73m
+									387 text 2
+				155 heading Is it CKD?, Value: 2
+					156 text Is it CKD?
+				157 text Either of the following must be present for ≥3 months to be CKD:
+				158 content list
+					159 container
+						160 AXListMarker • 
+						161 text eGFR less than 60
+					162 container
+						163 AXListMarker • 
+						164 text uACR ≥30 mg/g or other markers of kidney damage
+				165 container
+					166 link Description: Learn more about the criteria for CKD, Value: kidney.org/what-criteria-ckd
+					167 text .
+				168 text Equation used to estimate GFR?
+				372 container
+					373 radio button (settable, integer) Description: CKD-EPI Creatinine (2021), Value: 1
+					374 text CKD-EPI Creatinine (2021)
+					375 radio button (settable, integer) Description: CKD-EPI Creatinine-Cystatin C (2021), Value: 0
+					376 text CKD-EPI Creatinine-Cystatin C (2021)
+					377 radio button (settable, integer) Description: CKD-EPI Cystatin C (2012), Value: 0
+					378 text CKD-EPI Cystatin C (2012)
+				169 text What is the patient’s ACR?†
+				170 container
+					171 container
+						172 radio button (settable, integer) Description: <30 mg/g, Value: 1
+						173 text <30 mg/g
+					174 container
+						175 radio button (settable, integer) Description: 30-300 mg/g, Value: 0
+						176 text 30-300 mg/g
+					177 container
+						178 radio button (settable, integer) Description: >300 mg/g, Value: 0
+						179 text >300 mg/g
+					180 container
+						181 radio button (settable, integer) Description: <3 mg/mmol, Value: 0
+						182 text <3 mg/mmol
+					183 container
+						184 radio button (settable, integer) Description: 3-30 mg/mmol, Value: 0
+						185 text 3-30 mg/mmol
+					186 container
+						187 radio button (settable, integer) Description: >30 mg/mmol, Value: 0
+						188 text >30 mg/mmol
+				189 text Based on the information supplied:
+				190 table is-it-ckd
+					191 container
+						192 row
+							193 cell
+								194 text GFR category is:‡
+							195 cell
+								196 text field (settable) Value: G2, ID: result_5
+								379 text    see note below
+						197 row
+							198 cell
+								199 text ACR category is:**
+							200 cell
+								201 text field (settable) Value: A1, ID: result_6
+						202 row
+							203 cell
+								204 text CKD classification is:
+							205 cell
+								206 text field (settable) Value: G2/A1, ID: result_7
+						207 row
+							208 cell
+								209 text Risk of progression is:
+							210 cell
+								211 text field (settable) Value: Low, ID: result_8
+						212 row
+							213 cell
+								214 text Frequency of monitoring should be:
+							215 cell
+								216 text field (settable) Value: Once per year, ID: result_9
+						217 row
+							218 cell
+								219 text Referral to a nephrologist is:
+							220 cell
+								221 text field (settable) Value: Not needed, ID: result_10
+				380 text In the absence of evidence of kidney damage, neither GFR category G1 nor G2 fulfill the criteria for CKD.
+				222 text † Neither the category of GFR nor the category of albuminuria alone can fully capture prognosis of CKD. Persistent and increased albuminuria has been shown to be an independent risk factor for CKD progression.
+				223 text ‡ In the absence of evidence of kidney damage, neither GFR category G1 nor G2 fulfill the criteria for CKD.
+				224 text ** ACR >30 mg/g for ≥3 months indicates CKD.
+			225 heading Additional Information, Value: 2
+				226 text Additional Information
+			227 heading Formulas, Value: 3
+				228 text Formulas
+			229 content list
+				230 container
+					231 AXListMarker • 
+					232 link Description: CKD-EPI Creatinine Equation (2021), Value: kidney.org/professionals/ckd-epi-creatinine-equation-2021
+				233 container
+					234 AXListMarker • 
+					235 link Description: CKD-EPI Creatinine-Cystatin Equation (2021), Value: kidney.org/professionals/ckd-epi-creatinine-cystatin-equation-2021
+				236 container
+					237 AXListMarker • 
+					238 link Description: CKD-EPI Cystatin C Equation (2012), Value: kidney.org/professionals/ckd-epi-cystatin-c-equation-2012
+				239 container
+					240 AXListMarker • 
+					241 text Learn more about 
+					242 link Description: CKD-EPI Collaboration, Help: (opens in a new window), Value: tuftsmedicine.org/research-clinical-trials/research-institutes-research-specialty/chronic-kidney-disease-epidemiology-collaboration-ckd-epi
+					243 text  and estimating GFR.
+			244 heading About CKD, Value: 3
+				245 text About CKD
+			246 content list
+				247 container
+					248 AXListMarker • 
+					249 link Description: Criteria for CKD?, Value: kidney.org/professionals/explore-your-knowledge/what-is-the-criteria-for-ckd
+				250 container
+					251 AXListMarker • 
+					252 link Description: Classification of CKD?, Value: kidney.org/professionals/explore-your-knowledge/how-to-classify-ckd
+				253 container
+					254 AXListMarker • 
+					255 link Description: Why classify CKD?, Value: kidney.org/professionals/explore-your-knowledge/why-classify-ckd
+			256 link Description: Clinician Tools, Value: kidney.org/professionals/clinician-tools-resources
+			257 link Description: NKF KDOQI Clinical Practice Guidelines & Commentaries, Value: kidney.org/professionals/kdoqi
+			258 link Description: FAQs About GFR Estimates, Value: kidney.org/sites/default/files/441-8491_2202_faqs_aboutgfr_v5.pdf
+			259 heading Other Calculators, Value: 2
+				260 text Other Calculators
+			261 content list
+				262 container
+					263 AXListMarker • 
+					264 link Description: Pediatric eGFR Calculator, Value: kidney.org/professionals/gfr_calculatorPed
+				265 container
+					266 AXListMarker • 
+					267 link Description: Pediatric Chronic Kidney Disease Risk Calculator, Value: kidney.org/professionals/gfr_calculatorPedRisk
+				268 container
+					269 AXListMarker • 
+					270 link Description: Kidney Failure Risk Equation, Help: (opens in a new window), Value: kidneyfailurerisk.com/
+				271 container
+					272 AXListMarker • 
+					273 link Description: NKF KDOQI app, Value: kidney.org/apps/kdoqi-app
+		274 container Quick Links, ID: block-nephron-quicklinksfooter
+			275 heading Quick Links, Value: 2, ID: block-nephron-quicklinksfooter-menu
+				276 text Quick Links
+			277 content list
+				278 link Description: About Us, Value: kidney.org/about
+				279 link Description: Careers, Value: kidney.org/about/careers
+				280 link Description: Contact Us, Value: kidney.org/about/contact
+				281 link Description: Content Licensing, Value: kidney.org/about/content-licensing
+				282 link Description: National Partners, Value: kidney.org/partners
+				283 link Description: Our Store, Value: kidney.org/store
+				284 link Description: Press Room, Value: kidney.org/press-room
+		285 link Description: Español, Value: kidney.org/es/profesionales/calculadora-tfg, ID: language-switcher
+		286 heading Connect with Us, Value: 2
+			287 text Connect with Us
+		288 container webform-submission-103662-node-152545-add-form
+			289 container edit-container
+				290 container
+					291 text First Name
+					292 text *
+					293 text field (settable) First Name*, ID: edit-first-name
+				294 container
+					295 text Last Name
+					296 text *
+					297 text field (settable) Last Name*, ID: edit-last-name
+			298 container
+				299 text Email
+				300 text *
+				301 text field (settable) Email*
+			302 container
+				303 text Zip Code
+				304 text *
+				305 text field (settable) Zip Code*, ID: edit-zip-code
+			306 container
+				307 checkbox (settable, integer) Description: Sign-up for text messages, Value: 0, ID: edit-sign-up-for-text-messages
+				381 text Sign-up for text messages
+			308 pop up button (collapsed, settable) Value: - Primary Connection to Kidney Disease -, ID: edit-connection-to-kidney-disease, Secondary Actions: Expand
+				309 menu
+					310 (selected) - Primary Connection to Kidney Disease -
+					311 I am at risk for kidney disease
+					312 I am a kidney patient
+					313 I am a family/friend of a kidney patient
+					314 I am a healthcare professional
+					315 I am a care partner of a kidney patient
+					316 I am a living kidney donor
+					317 I am considering becoming a living kidney donor
+					318 I have lost someone to kidney disease
+					319 I am a family member/friend of a deceased organ donor
+					320 Other
+			321 button Submit, ID: edit-submit
+		322 container block-nephron-givetonkf
+			323 heading Give to NKF, Value: 4
+				324 text Give to NKF
+			325 text Contribute to our mission with a general, memorial, or honor donation.
+			326 button Donate, ID: classy-modal-trigger-footer
+		327 container block-nephron-needhelpcallnkfcares
+			328 heading Need help? Call NKF CARES, Value: 2
+				329 text Need help? Call NKF CARES
+			330 container
+				331 text 855.NKF.CARES ( 855.653.2273 )
+			332 text M–F 9:00am – 7:00pm
+		333 container block-nephron-address
+			334 text 30 East 33rd Street, New York, NY 10016
+			335 text © 2026 National Kidney Foundation, Inc.
+		336 container sub footer menu, ID: block-nephron-subfootermenu
+			337 heading sub footer menu, Value: 2, ID: block-nephron-subfootermenu-menu
+				338 text sub footer menu
+			339 content list
+				340 container
+					341 link Description: Legal & Copyright, Value: kidney.org/about/legal
+					388 text |
+				343 container
+					344 link Description: Privacy Policy, Value: kidney.org/about/privacy
+					389 text |
+				346 link Description: State fundraising notices, Value: kidney.org/sites/default/files/required-fundraising-disclosure-statements.pdf
+		347 container footer social media links, ID: block-nephron-footersocialmedialinks
+			348 heading footer social media links, Value: 2, ID: block-nephron-footersocialmedialinks-menu
+				349 text footer social media links
+			350 content list
+				351 link Description: Facebook, Help: (opens in a new window), Value: facebook.com/nationalkidneyfoundation/
+				352 link Description: Instagram, Help: (opens in a new window), Value: instagram.com/nationalkidneyfoundation
+				353 link Description: Linkedin, Help: (opens in a new window), Value: linkedin.com/company/national-kidney-foundation
+				354 link Description: Tik Tok, Help: (opens in a new window), Value: tiktok.com/@nationalkidneyfoundation
+				355 link Description: Threads, Help: (opens in a new window), Value: threads.com/@nationalkidneyfoundation
+				356 link Description: Bluesky, Help: (opens in a new window), Value: bsky.app/profile/kidney.org
+				357 link Description: Youtube, Help: (opens in a new window), Value: youtube.com/c/kidneyfoundation?sub_confirmation=1
+		358 image
+
+The focused UI element is 129 button Calculate

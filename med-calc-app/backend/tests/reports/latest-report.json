@@ -1,0 +1,4671 @@
+{
+  "generated_at_utc": "2026-11-12T19:18:53.482680+00:00",
+  "status": "PASSED",
+  "strict_mode": false,
+  "exit_code": 0,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "reference_set_version": "1.0.2",
+  "clinical_signoff": "pendiente de Tomeu",
+  "test_methods": 6,
+  "observations_by_kind": {
+    "nkf": 24,
+    "raw": 126
+  },
+  "events_by_status": {
+    "passed": 352
+  },
+  "maximum_raw_absolute_error": 2.8421709430404007e-13,
+  "events": [
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/data/reference-cases.json')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/data/sources.json')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/reference.py')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/generate_reference.py')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/requirements.lock')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-HH.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-HH.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-HL.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-HL.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-LH.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-LH.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-LL.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-F-LL.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-HH.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-HH.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-HL.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-HL.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-LH.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-LH.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-LL.png')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/NKF-M-LL.txt')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_evidence_integrity (tests.test_suite.EgfrTests.test_evidence_integrity) (file='tests/evidence/nkf-observed.json')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "tests.test_suite.EgfrTests.test_evidence_integrity",
+      "status": "passed"
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-001')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-002')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-003')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-004')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-005')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-006')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-007')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-008')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-009')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-010')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-011')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-012')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-013')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-014')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-015')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-016')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-017')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-018')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-019')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-020')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-021')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-022')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-023')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-024')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-025')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-026')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-027')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-028')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-029')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-030')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-031')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-032')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-033')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-034')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-035')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-036')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-037')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-038')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-039')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-040')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-041')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-042')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-043')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-044')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-045')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-046')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-047')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-048')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-049')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-050')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-051')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-052')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-053')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-054')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-055')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-056')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-057')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-058')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-059')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-060')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-061')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-062')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-063')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-064')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-065')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-066')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-067')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-068')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-069')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-070')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-071')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-072')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-073')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-074')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-075')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-076')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-077')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-078')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-079')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-080')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-081')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-082')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-083')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-084')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-085')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-086')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-087')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-088')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-089')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-090')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-091')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-092')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-093')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-094')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-095')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-096')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-097')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-098')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-099')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-100')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-101')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-102')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-103')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-104')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-105')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-106')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-107')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-108')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-109')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-110')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-111')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-112')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-113')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-114')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-115')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-116')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-117')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-118')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-119')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-120')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-121')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-122')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-123')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-124')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-125')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (case='N1-REF-126')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "tests.test_suite.EgfrTests.test_frozen_cases_through_api",
+      "status": "passed"
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 17, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': None, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': True, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62.5, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': '62', 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'X', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'unknown', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': True})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': '1.2'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 'abc'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 0})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': -1})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': nan})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': inf})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1e+308})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'unit': 'µmol/L'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'method': 'creatinine', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'cystatin'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'cystatin', 'cystatin_mg_l': 0})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'cystatin', 'cystatin_mg_l': 0.9, 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'combined', 'cystatin_mg_l': 0.9})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'combined', 'creatinine_mg_dl': 1.2})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'combined', 'creatinine_mg_dl': 1.2, 'cystatin_mg_l': -0.9})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (body='{')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (body='[]')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (body='null')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes",
+      "status": "passed"
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=14.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=14.999999999999998)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=15)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=15.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=29.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=29.999999999999996)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=30)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=30.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=44.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=44.99999999999999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=45)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=45.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=59.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=59.99999999999999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=60)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=60.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=89.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=89.99999999999999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=90)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=90.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood",
+      "status": "passed"
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-LL', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-LL', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-LL', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-LH', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-LH', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-LH', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-HL', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-HL', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-HL', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-HH', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-HH', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-F-HH', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-LL', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-LL', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-LL', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-LH', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-LH', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-LH', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-HL', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-HL', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-HL', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-HH', method='creatinine')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-HH', method='combined')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_nkf_observed_outputs (tests.test_suite.EgfrTests.test_nkf_observed_outputs) (anchor='NKF-M-HH', method='cystatin')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "tests.test_suite.EgfrTests.test_nkf_observed_outputs",
+      "status": "passed"
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-001')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-002')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-003')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-004')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-005')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-006')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-007')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-008')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-009')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-010')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-011')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-012')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-013')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-014')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-015')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-016')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-017')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-018')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-019')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-020')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-021')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-022')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-023')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-024')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-025')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-026')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-027')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-028')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-029')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-030')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-031')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-032')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-033')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-034')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-035')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-036')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-037')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-038')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-039')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-040')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-041')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-042')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-043')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-044')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-045')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-046')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-047')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-048')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-049')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-050')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-051')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-052')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-053')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-054')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-055')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-056')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-057')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-058')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-059')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-060')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-061')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-062')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-063')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-064')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-065')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-066')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-067')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-068')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-069')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-070')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-071')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-072')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-073')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-074')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-075')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-076')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-077')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-078')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-079')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-080')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-081')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-082')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-083')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-084')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-085')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-086')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-087')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-088')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-089')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-090')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-091')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-092')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-093')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-094')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-095')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-096')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-097')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-098')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-099')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-100')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-101')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-102')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-103')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-104')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-105')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-106')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-107')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-108')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-109')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-110')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-111')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-112')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-113')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-114')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-115')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-116')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-117')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-118')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-119')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-120')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-121')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-122')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-123')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-124')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-125')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_raw_values_against_frozen_reference (tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference) (case='N1-REF-126')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "tests.test_suite.EgfrTests.test_raw_values_against_frozen_reference",
+      "status": "passed"
+    }
+  ],
+  "observations": [
+    {
+      "kind": "nkf",
+      "id": "NKF-F-LL",
+      "method": "creatinine",
+      "observed": "133",
+      "reference": "133.347505715095240948195325324343592054149182084877403936348",
+      "actual": 133.34750571509528,
+      "difference": 0.3475057150952807,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-LL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-LL",
+      "method": "combined",
+      "observed": "131",
+      "reference": "130.859640600623435336038401967038234704230459124786124655006",
+      "actual": 130.8596406006234,
+      "difference": 0.14035939937659236,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-LL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-LL",
+      "method": "cystatin",
+      "observed": "123",
+      "reference": "123.274606948022427091021722952690730556634103201347321052646",
+      "actual": 123.27460694802244,
+      "difference": 0.2746069480224378,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-LL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-LH",
+      "method": "creatinine",
+      "observed": "80",
+      "reference": "80.0759821593693935173067492272796350220286466420671998767233",
+      "actual": 80.07598215936953,
+      "difference": 0.07598215936953068,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-LH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-LH",
+      "method": "combined",
+      "observed": "83",
+      "reference": "83.0077706160293568267937804716040766301169925631568094953670",
+      "actual": 83.00777061602923,
+      "difference": 0.007770616029233679,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-LH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-LH",
+      "method": "cystatin",
+      "observed": "71",
+      "reference": "71.0020431096575666748187949434840525524132375557980634359384",
+      "actual": 71.00204310965754,
+      "difference": 0.0020431096575350693,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-LH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-HL",
+      "method": "creatinine",
+      "observed": "109",
+      "reference": "109.461245109199584867870672222920155600175484785802220233161",
+      "actual": 109.46124510919961,
+      "difference": 0.46124510919960926,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-HL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-HL",
+      "method": "combined",
+      "observed": "118",
+      "reference": "117.651307257910178870741568377430459743352253176116051751469",
+      "actual": 117.65130725791012,
+      "difference": 0.3486927420898809,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-HL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-HL",
+      "method": "cystatin",
+      "observed": "123",
+      "reference": "123.274606948022427091021722952690730556634103201347321052646",
+      "actual": 123.27460694802244,
+      "difference": 0.2746069480224378,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-HL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-HH",
+      "method": "creatinine",
+      "observed": "66",
+      "reference": "65.7321384715963515073127852727292201554826502018081575166851",
+      "actual": 65.73213847159646,
+      "difference": 0.26786152840354305,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-HH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-HH",
+      "method": "combined",
+      "observed": "75",
+      "reference": "74.6293714449806563278773218825499293805922700177213226974844",
+      "actual": 74.62937144498053,
+      "difference": 0.370628555019465,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-HH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-F-HH",
+      "method": "cystatin",
+      "observed": "71",
+      "reference": "71.0020431096575666748187949434840525524132375557980634359384",
+      "actual": 71.00204310965754,
+      "difference": 0.0020431096575350693,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-F-HH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-LL",
+      "method": "creatinine",
+      "observed": "132",
+      "reference": "131.558305044256444697595837253808999795450189171584375974103",
+      "actual": 131.55830504425646,
+      "difference": 0.441694955743543,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-LL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-LL",
+      "method": "combined",
+      "observed": "134",
+      "reference": "133.623872087781139176850089274259699544719592527948226163111",
+      "actual": 133.6238720877811,
+      "difference": 0.37612791221889097,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-LL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-LL",
+      "method": "cystatin",
+      "observed": "132",
+      "reference": "132.268891575131359539722878704603788150894960516467082674513",
+      "actual": 132.26889157513136,
+      "difference": 0.26889157513136297,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-LL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-LH",
+      "method": "creatinine",
+      "observed": "79",
+      "reference": "79.0015563556822347640298713438554186224362832675716459938785",
+      "actual": 79.00155635568235,
+      "difference": 0.0015563556823536828,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-LH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-LH",
+      "method": "combined",
+      "observed": "85",
+      "reference": "84.7611965933776335389868791884119386383571584108799251903613",
+      "actual": 84.7611965933775,
+      "difference": 0.23880340662249466,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-LH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-LH",
+      "method": "cystatin",
+      "observed": "76",
+      "reference": "76.1824496884737839858570761196180821377824437293970637724661",
+      "actual": 76.18244968847375,
+      "difference": 0.18244968847375276,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-LH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-HL",
+      "method": "creatinine",
+      "observed": "112",
+      "reference": "111.882257070599459947312951776791289395698685115113792431485",
+      "actual": 111.8822570705995,
+      "difference": 0.11774292940050657,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-HL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-HL",
+      "method": "combined",
+      "observed": "124",
+      "reference": "124.058353887936818282927075979588021624644808119181907495999",
+      "actual": 124.05835388793679,
+      "difference": 0.058353887936789306,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-HL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-HL",
+      "method": "cystatin",
+      "observed": "132",
+      "reference": "132.268891575131359539722878704603788150894960516467082674513",
+      "actual": 132.26889157513136,
+      "difference": 0.26889157513136297,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-HL.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-HH",
+      "method": "creatinine",
+      "observed": "67",
+      "reference": "67.1859707693138659251156341792006261991599647980855343427397",
+      "actual": 67.18597076931397,
+      "difference": 0.18597076931396828,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-HH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-HH",
+      "method": "combined",
+      "observed": "79",
+      "reference": "78.6935325151962308862541314479805104134688271278049721028332",
+      "actual": 78.69353251519611,
+      "difference": 0.3064674848038891,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-HH.png"
+    },
+    {
+      "kind": "nkf",
+      "id": "NKF-M-HH",
+      "method": "cystatin",
+      "observed": "76",
+      "reference": "76.1824496884737839858570761196180821377824437293970637724661",
+      "actual": 76.18244968847375,
+      "difference": 0.18244968847375276,
+      "tolerance": 0.50000001,
+      "source_ids": [
+        "NKF-CALCULATOR"
+      ],
+      "evidence": "tests/evidence/NKF-M-HH.png"
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-001",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": null
+      },
+      "expected": "128.528769146202178513497894937378207747080905747379053517367",
+      "actual": 128.5287691462022,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2852876914620217e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-002",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": null
+      },
+      "expected": "128.484494516838915698969970353914858000409610458628779242708",
+      "actual": 128.48449451683896,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 2.284844945168389e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-003",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": null
+      },
+      "expected": "128.264580978243640717601912926996625179839460106351206851265",
+      "actual": 128.26458097824369,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 2.2826458097824364e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-004",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "115.400238285601771336912190097235278861024400586750324858542",
+      "actual": 115.40023828560177,
+      "difference": 0.0,
+      "tolerance": 2.1540023828560178e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-005",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "115.328234833844938677303267080333082925103721469400492015616",
+      "actual": 115.32823483384495,
+      "difference": 0.0,
+      "tolerance": 2.1532823483384496e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-006",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "115.137068130568901492756083443558481936879566340594732653632",
+      "actual": 115.13706813056889,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.151370681305689e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-007",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "121.261909500142178407215839846544699848923920185416138531282",
+      "actual": 121.26190950014215,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2126190950014217e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-008",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "121.212929273707351280410486117633524250647648425562607771617",
+      "actual": 121.21292927370732,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2121292927370737e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-009",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "121.095180542218584358742721719362790886417582618136015035072",
+      "actual": 121.09518054221854,
+      "difference": 4.263256414560601e-14,
+      "tolerance": 2.2109518054221857e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-010",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "121.223950663840234848343992031968416976683983202128505778193",
+      "actual": 121.22395066384021,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2122395066384025e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-011",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "121.174985769774862694961656751685242956535093042358369251691",
+      "actual": 121.17498576977484,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2117498576977488e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-012",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "121.057273897385888675449140662829746842580946441768324633206",
+      "actual": 121.05727389738585,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2105727389738588e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-013",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "121.129846109087654796768108229402581571152922541741970691013",
+      "actual": 121.12984610908764,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2112984610908765e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-014",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "121.080919225824020220789305357438903097503312490693154367774",
+      "actual": 121.080919225824,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2108091922582404e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-015",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "120.963298731609735249213866141254144506793425084409258046731",
+      "actual": 120.96329873160973,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2096329873160973e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-016",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": null
+      },
+      "expected": "97.7588343604585498208092366096862976998022219210734664106800",
+      "actual": 97.75883436045864,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 1.9775883436045855e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-017",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": null
+      },
+      "expected": "97.7251591281580637595627889216372331581332369306836043597276",
+      "actual": 97.72515912815815,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 1.9772515912815808e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-018",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": null
+      },
+      "expected": "97.5578931429940485041630974188421555447819997240203802683397",
+      "actual": 97.55789314299415,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.9755789314299407e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-019",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "96.7425646164136176563379099402501698042548348131401427403795",
+      "actual": 96.74256461641362,
+      "difference": 0.0,
+      "tolerance": 1.9674256461641364e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-020",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "96.6822025349510934039754550944288970100272406912236821065676",
+      "actual": 96.68220253495107,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 1.966822025349511e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-021",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "96.5219432718946474828484606986920725786338399054204989078541",
+      "actual": 96.52194327189464,
+      "difference": 0.0,
+      "tolerance": 1.9652194327189463e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-022",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "102.106588719484651502841076845899226662069402106062067898704",
+      "actual": 102.10658871948456,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 2.0210658871948466e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-023",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "102.065345728535690241661465385463932068394339399780230735145",
+      "actual": 102.06534572853559,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 2.020653457285357e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-024",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "101.966197353354030588010749919734216706912486532692875830610",
+      "actual": 101.96619735335393,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 2.0196619735335404e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-025",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "102.074626108121119822021184776141477041245481171158682759499",
+      "actual": 102.07462610812104,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 2.0207462610812113e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-026",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "102.033396027540702875449892118478859231546156293454084803910",
+      "actual": 102.0333960275406,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 2.020333960275407e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-027",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "101.934278688955437243530507010145068556929107741736065351989",
+      "actual": 101.93427868895536,
+      "difference": 7.105427357601002e-14,
+      "tolerance": 2.0193427868895544e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-028",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "101.995386921567318688426679526072363350483401202258728479855",
+      "actual": 101.99538692156725,
+      "difference": 7.105427357601002e-14,
+      "tolerance": 2.0199538692156732e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-029",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "101.954188847354902339255576041055151059159150068581046140044",
+      "actual": 101.95418884735483,
+      "difference": 7.105427357601002e-14,
+      "tolerance": 2.0195418884735493e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-030",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "101.855148452252873715906409606985753026847920056068301649039",
+      "actual": 101.8551484522528,
+      "difference": 7.105427357601002e-14,
+      "tolerance": 2.018551484522529e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-031",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": null
+      },
+      "expected": "77.1823017605338497257863194465195551654482452744587152595584",
+      "actual": 77.18230176053396,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.7718230176053383e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-032",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": null
+      },
+      "expected": "77.1557145783290311357246168103441176164973175711749240609505",
+      "actual": 77.15571457832917,
+      "difference": 1.4210854715202004e-13,
+      "tolerance": 1.7715571457832905e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-033",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": null
+      },
+      "expected": "77.0236551708528734216630466410734692178107025635219269857363",
+      "actual": 77.02365517085299,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.7702365517085288e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-034",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "83.0754029230007750430268992996668462393487230264838234989420",
+      "actual": 83.07540292300075,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.830754029230008e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-035",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "83.0235684046721240139881913463838469313772313977561571477998",
+      "actual": 83.02356840467209,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.8302356840467213e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-036",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "82.8859495302568535094592941231860395485429537394201707402584",
+      "actual": 82.88594953025682,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.8288594953025686e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-037",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "88.0167829409333814217615048017573945076795958090288654245240",
+      "actual": 88.01678294093325,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.880167829409334e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-038",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "87.9812311178070361137301077608181129459540607611295138200632",
+      "actual": 87.9812311178069,
+      "difference": 1.4210854715202004e-13,
+      "tolerance": 1.8798123111780705e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-039",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.699",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "87.8957643411107241185696600583286949036376811087983295010858",
+      "actual": 87.89576434111059,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.878957643411107e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-040",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "87.9892308871248054378345451803188958342675169537555637443120",
+      "actual": 87.98923088712469,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.879892308871248e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-041",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "87.9536901928503795118787177510356371627575921192708274336536",
+      "actual": 87.95369019285025,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.879536901928504e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-042",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.7",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "87.8682501699747787621381230364029081017585726437813560065225",
+      "actual": 87.86825016997466,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.8786825016997478e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-043",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "87.9209260071872079866860196876409919772900987901458135599839",
+      "actual": 87.92092600718709,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.879209260071872e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-044",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "87.8854129026851989570769748496804587963862593956581767889689",
+      "actual": 87.88541290268509,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.8788541290268523e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-045",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.701",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "87.8000392057729637701625512893359007620361834384064529892680",
+      "actual": 87.80003920577286,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.8780003920577295e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-046",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.1",
+        "cystatin_mg_l": null
+      },
+      "expected": "156.197836413876380422875715435659473590796251236034084101210",
+      "actual": 156.19783641387653,
+      "difference": 1.4210854715202004e-13,
+      "tolerance": 2.561978364138764e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-047",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "16",
+        "cystatin_mg_l": null
+      },
+      "expected": "2.28654659128134072287453525482548612381727180978311791915001",
+      "actual": 2.2865465912813434,
+      "difference": 2.6645352591003757e-15,
+      "tolerance": 1.0228654659128135e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-048",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.1"
+      },
+      "expected": "272.890513850246256711796505179473737800410605693571819798734",
+      "actual": 272.8905138502462,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 3.728905138502462e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-049",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "9"
+      },
+      "expected": "3.88522331081921995239134141259367196943799597248192597554051",
+      "actual": 3.885223310819219,
+      "difference": 8.881784197001252e-16,
+      "tolerance": 1.0388522331081921e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-050",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "0.1",
+        "cystatin_mg_l": "0.1"
+      },
+      "expected": "305.855911112560520879030678462838504747648379343117662026775",
+      "actual": 305.85591111256025,
+      "difference": 2.8421709430404007e-13,
+      "tolerance": 4.058559111125606e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-051",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "F",
+        "creatinine_mg_dl": "16",
+        "cystatin_mg_l": "9"
+      },
+      "expected": "2.82903123493733085773115281780340409911065146766002659619311",
+      "actual": 2.8290312349373274,
+      "difference": 3.552713678800501e-15,
+      "tolerance": 1.0282903123493733e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-052",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": null
+      },
+      "expected": "127.003596259837889053823308315376407788551593692826362594008",
+      "actual": 127.00359625983793,
+      "difference": 4.263256414560601e-14,
+      "tolerance": 2.2700359625983788e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-053",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": null
+      },
+      "expected": "126.960962961303276382381393630350650198033211915641086208209",
+      "actual": 126.96096296130331,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.269609629613033e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-054",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": null
+      },
+      "expected": "126.791888331773631959860546631421146922413323700909950031785",
+      "actual": 126.79188833177369,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 2.2679188833177362e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-055",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "123.819998160516922035313508688020685473202146552307215513457",
+      "actual": 123.81999816051692,
+      "difference": 0.0,
+      "tolerance": 2.2381999816051693e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-056",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "123.742741238031050082943419614091290692171374967167909888000",
+      "actual": 123.74274123803104,
+      "difference": 0.0,
+      "tolerance": 2.2374274123803104e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-057",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "123.537626749537447953600947900813821820686229979178897697030",
+      "actual": 123.53762674953744,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2353762674953744e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-058",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "125.901722567884225418427479312896629162015584751739595711463",
+      "actual": 125.90172256788419,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2590172256788422e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-059",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "125.850868223718529070084771605143776212309025157660547716400",
+      "actual": 125.85086822371848,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 2.2585086822371855e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-060",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "125.728614102983265171127698516515629511419261990444702500221",
+      "actual": 125.72861410298322,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 2.2572861410298328e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-061",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "125.881568705960783850824498475564295925943907790372280143503",
+      "actual": 125.88156870596076,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.258815687059608e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-062",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "125.830722502362266557592582296661726849984520293207029337166",
+      "actual": 125.83072250236224,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2583072250236225e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-063",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "125.708487951594899974505857386116040334975022265595352682457",
+      "actual": 125.70848795159488,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2570848795159493e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-064",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "125.805545496614435712044465484109129559048307542696134939805",
+      "actual": 125.80554549661443,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2580554549661443e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-065",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "125.754730000383330293782884746305245655808450476364228691427",
+      "actual": 125.7547300003833,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.2575473000038332e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-066",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "125.632569270294700647187552930291564464505931023489754999597",
+      "actual": 125.6325692702947,
+      "difference": 0.0,
+      "tolerance": 2.256325692702947e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-067",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": null
+      },
+      "expected": "96.5987896128149465868707588538941052160040974170153242533461",
+      "actual": 96.59878961281504,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.9659878961281495e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-068",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": null
+      },
+      "expected": "96.5663627748597467979869455747403489704873882714264865214700",
+      "actual": 96.56636277485984,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.9656636277485974e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-069",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": null
+      },
+      "expected": "96.4377648056070956682244086910334309929894903629987969113321",
+      "actual": 96.4377648056072,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.964377648056071e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-070",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "103.801034996151950275040675901555976184822784134270539421008",
+      "actual": 103.80103499615194,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.0380103499615195e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-071",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "103.736268814325207514995123491876498937797468552815109556403",
+      "actual": 103.73626881432519,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.0373626881432524e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-072",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "103.564316815337604595330966414905657273212274576631436596410",
+      "actual": 103.56431681533759,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.0356431681533763e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-073",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "106.013466704468650941214107316149551465336447876228518833772",
+      "actual": 106.01346670446856,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 2.0601346670446865e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-074",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "105.970645643628273917194298870991527917752971805800758822747",
+      "actual": 105.97064564362816,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 2.059706456436283e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-075",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "105.867703579820816099490929790420160418248700329794245700798",
+      "actual": 105.8677035798207,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 2.058677035798208e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-076",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "105.996496477799709057135186683428325068790738495491882408618",
+      "actual": 105.99649647779962,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 2.059964964777997e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-077",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "105.953682271589514927777665751276073968376070917397803534694",
+      "actual": 105.95368227158941,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 2.0595368227158952e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-078",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "105.850756686350402122046217040649084690476747395364553844225",
+      "actual": 105.85075668635032,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 2.058507566863504e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-079",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "105.932482389601190712241689580254636194899825614242798497864",
+      "actual": 105.93248238960112,
+      "difference": 7.105427357601002e-14,
+      "tolerance": 2.0593248238960122e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-080",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "105.889694040022711414549339997615974814396884875568330834196",
+      "actual": 105.88969404002263,
+      "difference": 8.526512829121202e-14,
+      "tolerance": 2.058896940400227e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-081",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "105.786830614267263813201690037193881397284349660417180656783",
+      "actual": 105.78683061426719,
+      "difference": 7.105427357601002e-14,
+      "tolerance": 2.0578683061426727e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-082",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": null
+      },
+      "expected": "76.2664262352773214036948272476954326023073441311651121012627",
+      "actual": 76.26642623527745,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.7626642623527735e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-083",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": null
+      },
+      "expected": "76.2408246821433113989373683896681004115586142007657352380934",
+      "actual": 76.24082468214344,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.7624082468214332e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-084",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": null
+      },
+      "expected": "76.1392943464597608401751121894578371476486662151791526482522",
+      "actual": 76.13929434645989,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.761392943464598e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-085",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "89.1366984152368830933765013944923242911466985262701968872768",
+      "actual": 89.13669841523685,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.891366984152369e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-086",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "89.0810819792619356373263855647895353340957418430860055233903",
+      "actual": 89.0810819792619,
+      "difference": 4.263256414560601e-14,
+      "tolerance": 1.8908108197926196e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-087",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "88.9334222427648642805357233081395274125997357719100544423373",
+      "actual": 88.93342224276482,
+      "difference": 4.263256414560601e-14,
+      "tolerance": 1.8893342224276486e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-088",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "91.3845463330270805547114077741441400312234015667166349308089",
+      "actual": 91.38454633302695,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.9138454633302707e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-089",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "91.3476341996911761809000567166999790339614046471028212109232",
+      "actual": 91.34763419969103,
+      "difference": 1.4210854715202004e-13,
+      "tolerance": 1.913476341996912e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-090",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.899",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "91.2588972298319165504708069762455707035028221637780925496865",
+      "actual": 91.25889722983177,
+      "difference": 1.4210854715202004e-13,
+      "tolerance": 1.9125889722983192e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-091",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "91.3699178474816255844595484738513975433722917484481451135119",
+      "actual": 91.3699178474815,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.913699178474816e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-092",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "91.3330116228975903550142448089674321523962534987236006579996",
+      "actual": 91.33301162289746,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.913330116228976e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-093",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.9",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "91.2442888577100506356574486359324071669351740849235264865239",
+      "actual": 91.24428885770993,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.9124428885771004e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-094",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.799"
+      },
+      "expected": "91.3147371370417754140448862274332515631457556208498887269991",
+      "actual": 91.31473713704166,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.9131473713704177e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-095",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.8"
+      },
+      "expected": "91.2778532011030643399277204203796627077380101965704748220335",
+      "actual": 91.27785320110294,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.9127785320110306e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-096",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.901",
+        "cystatin_mg_l": "0.801"
+      },
+      "expected": "91.1891840179404467474748109722462357848145121522534543767425",
+      "actual": 91.18918401794033,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.9118918401794043e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-097",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.1",
+        "cystatin_mg_l": null
+      },
+      "expected": "187.502521157603960232153984703853813155884113620219339070939",
+      "actual": 187.50252115760412,
+      "difference": 1.7053025658242404e-13,
+      "tolerance": 2.8750252115760397e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-098",
+      "method": "creatinine",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "16",
+        "cystatin_mg_l": null
+      },
+      "expected": "3.05473053350511480953230956619191980152617488862685754427245",
+      "actual": 3.054730533505118,
+      "difference": 3.1086244689504383e-15,
+      "tolerance": 1.0305473053350511e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-099",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.1"
+      },
+      "expected": "292.800980526015296901069211565958946137779619842888218668169",
+      "actual": 292.8009805260152,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 3.928009805260153e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-100",
+      "method": "cystatin",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "9"
+      },
+      "expected": "4.16869453950560080728684700922067807879613301768446993083746",
+      "actual": 4.1686945395056,
+      "difference": 8.881784197001252e-16,
+      "tolerance": 1.041686945395056e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-101",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "0.1",
+        "cystatin_mg_l": "0.1"
+      },
+      "expected": "284.593542601322190164155279628723572824044612911336285876305",
+      "actual": 284.593542601322,
+      "difference": 2.2737367544323206e-13,
+      "tolerance": 3.845935426013222e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-102",
+      "method": "combined",
+      "inputs": {
+        "age": 62,
+        "sex": "M",
+        "creatinine_mg_dl": "16",
+        "cystatin_mg_l": "9"
+      },
+      "expected": "3.36810829314250069097107608498365621607168055714178731597640",
+      "actual": 3.368108293142497,
+      "difference": 3.9968028886505635e-15,
+      "tolerance": 1.033681082931425e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-103",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.6",
+        "cystatin_mg_l": null
+      },
+      "expected": "133.347505715095240948195325324343592054149182084877403936348",
+      "actual": 133.34750571509528,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.3334750571509524e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-104",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "123.274606948022427091021722952690730556634103201347321052646",
+      "actual": 123.27460694802244,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2327460694802243e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-105",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.6",
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "130.859640600623435336038401967038234704230459124786124655006",
+      "actual": 130.8596406006234,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.3085964060062346e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-106",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.6",
+        "cystatin_mg_l": null
+      },
+      "expected": "80.0759821593693935173067492272796350220286466420671998767233",
+      "actual": 80.07598215936953,
+      "difference": 1.4210854715202004e-13,
+      "tolerance": 1.8007598215936937e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-107",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "71.0020431096575666748187949434840525524132375557980634359384",
+      "actual": 71.00204310965754,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.7100204310965756e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-108",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.6",
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "83.0077706160293568267937804716040766301169925631568094953670",
+      "actual": 83.00777061602923,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.8300777061602937e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-109",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": null
+      },
+      "expected": "109.461245109199584867870672222920155600175484785802220233161",
+      "actual": 109.46124510919961,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.0946124510919958e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-110",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "123.274606948022427091021722952690730556634103201347321052646",
+      "actual": 123.27460694802244,
+      "difference": 1.4210854715202004e-14,
+      "tolerance": 2.2327460694802243e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-111",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "F",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "117.651307257910178870741568377430459743352253176116051751469",
+      "actual": 117.65130725791012,
+      "difference": 5.684341886080802e-14,
+      "tolerance": 2.176513072579102e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-112",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": null
+      },
+      "expected": "65.7321384715963515073127852727292201554826502018081575166851",
+      "actual": 65.73213847159646,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.6573213847159636e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-113",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "71.0020431096575666748187949434840525524132375557980634359384",
+      "actual": 71.00204310965754,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.7100204310965756e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-114",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "F",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "74.6293714449806563278773218825499293805922700177213226974844",
+      "actual": 74.62937144498053,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.746293714449807e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-115",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": null
+      },
+      "expected": "131.558305044256444697595837253808999795450189171584375974103",
+      "actual": 131.55830504425646,
+      "difference": 0.0,
+      "tolerance": 2.3155830504425647e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-116",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "132.268891575131359539722878704603788150894960516467082674513",
+      "actual": 132.26889157513136,
+      "difference": 0.0,
+      "tolerance": 2.3226889157513136e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-117",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "133.623872087781139176850089274259699544719592527948226163111",
+      "actual": 133.6238720877811,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.3362387208778112e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-118",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": null
+      },
+      "expected": "79.0015563556822347640298713438554186224362832675716459938785",
+      "actual": 79.00155635568235,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.7900155635568225e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-119",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "76.1824496884737839858570761196180821377824437293970637724661",
+      "actual": 76.18244968847375,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.761824496884738e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-120",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "0.8",
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "84.7611965933776335389868791884119386383571584108799251903613",
+      "actual": 84.7611965933775,
+      "difference": 1.2789769243681803e-13,
+      "tolerance": 1.8476119659337766e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-121",
+      "method": "creatinine",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "1.0",
+        "cystatin_mg_l": null
+      },
+      "expected": "111.882257070599459947312951776791289395698685115113792431485",
+      "actual": 111.8822570705995,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.1188225707059945e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-122",
+      "method": "cystatin",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "132.268891575131359539722878704603788150894960516467082674513",
+      "actual": 132.26889157513136,
+      "difference": 0.0,
+      "tolerance": 2.3226889157513136e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-123",
+      "method": "combined",
+      "inputs": {
+        "age": 18,
+        "sex": "M",
+        "creatinine_mg_dl": "1.0",
+        "cystatin_mg_l": "0.7"
+      },
+      "expected": "124.058353887936818282927075979588021624644808119181907495999",
+      "actual": 124.05835388793679,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 2.240583538879368e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-124",
+      "method": "creatinine",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "1.0",
+        "cystatin_mg_l": null
+      },
+      "expected": "67.1859707693138659251156341792006261991599647980855343427397",
+      "actual": 67.18597076931397,
+      "difference": 9.947598300641403e-14,
+      "tolerance": 1.6718597076931387e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-125",
+      "method": "cystatin",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": null,
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "76.1824496884737839858570761196180821377824437293970637724661",
+      "actual": 76.18244968847375,
+      "difference": 2.842170943040401e-14,
+      "tolerance": 1.761824496884738e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2012",
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "raw",
+      "id": "N1-REF-126",
+      "method": "combined",
+      "inputs": {
+        "age": 100,
+        "sex": "M",
+        "creatinine_mg_dl": "1.0",
+        "cystatin_mg_l": "0.9"
+      },
+      "expected": "78.6935325151962308862541314479805104134688271278049721028332",
+      "actual": 78.69353251519611,
+      "difference": 1.1368683772161603e-13,
+      "tolerance": 1.7869353251519624e-08,
+      "source_ids": [
+        "NIDDK-ADULTS",
+        "INKER-2021",
+        "KDIGO-2024"
+      ]
+    }
+  ],
+  "tested_files_sha256": {
+    "egfr.py": "68de3d7a6dc84c068fcd67889ca6d40b19e9fb6262e49a56c4114b6f2a760e8e",
+    "main.py": "8958df84d725ca4ad0768798439e5265fb79680538ead5295583d36178581297",
+    "tests/requirements.lock": "c2b4bd4f1dbbc9eec4a63a0d957ca0d291fed90cd687225547473c2d504e6ba6",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/__main__.py": "b07bf47e87e8a497f0d8fd26b53086b119ccacf796a209404db4de3224085b98",
+    "tests/generate_reference.py": "14c184b1dd9b1cb1dce958cb7f52e3bcd4e8576c7f3022584f36f3d7719a3b5c",
+    "tests/reference.py": "7557430f0d991b1bede26cc704d50d322f15af182456d5e9ba7d05fda2407008",
+    "tests/test_suite.py": "928ac9a5af7b9c3104bd51c38cfa62b337e89e767f68733afd8ead9d14c1295b"
+  },
+  "evidence_manifest_sha256": "1339b36b6f6be391e2d8cab3339fdb3d5799cd3323653722e6b58546eeb84517",
+  "pending_criteria": [
+    {
+      "id": "CYS-AGE-COEFFICIENT",
+      "description": "Revisar con Tomeu la diferencia 0.9962 en la fila histórica de la tabla de 2021 frente a 0.996 en NIDDK y NKF. La referencia operativa actual usa 0.996 y concuerda con la calculadora externa.",
+      "status": "pendiente de revisión documental del tutor"
+    },
+    {
+      "id": "AGE-MAX",
+      "description": "Acordar máximo de edad. La API actual exige un mínimo de 18 años y admite edades superiores a las clínicamente plausibles.",
+      "status": "pendiente de decisión clínica y ficha"
+    },
+    {
+      "id": "UNITS",
+      "description": "La interfaz y la API actuales admiten creatinina en mg/dL. El soporte µmol/L y su conversión 88.4 están pendientes de implementación.",
+      "status": "pendiente de implementación"
+    },
+    {
+      "id": "PLAUSIBILITY",
+      "description": "Acordar avisos de plausibilidad propuestos por Tomeu y sus límites exactos.",
+      "status": "pendiente de decisión clínica y ficha"
+    },
+    {
+      "id": "DISCREPANCY",
+      "description": "Acordar la regla y el aviso por discrepancia entre estimaciones.",
+      "status": "pendiente de decisión clínica y ficha"
+    }
+  ]
+}
