@@ -1,6 +1,7 @@
 # MED-CALC
 
-Aplicación web para el cálculo de la tasa de filtrado glomerular estimada (eGFR) mediante las ecuaciones CKD-EPI.
+Aplicación web destinada para el calculo de calculadoras clínicas.
+Por el momento, posee la calculadora eGFR y sus derivados tests.
 
 ## Requisitos
 
