@@ -1,6 +1,6 @@
 {
-  "reference_set_version": "1.0.4",
-  "access_date": "2026-11-12",
+  "reference_set_version": "1.0.5",
+  "access_date": "2026-11-16",
   "module": "N1-eGFR-CKD-EPI",
   "review": {
     "performed_by": "Codex con comprobación documental y contraste externo NKF",
@@ -48,8 +48,8 @@
     {
       "id": "KDIGO-2024",
       "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
-      "locator": "Table 2, página impresa S137, página 22 del PDF",
-      "role": "categorías G1, G2, G3a, G3b, G4, G5 aplicadas antes del redondeo"
+      "locator": "Table 2, página impresa S137 (PDF 22); Table 11, página impresa S184 (PDF 69)",
+      "role": "Categorías G aplicadas antes del redondeo y contraste de la recomendación de informes de laboratorio."
     },
     {
       "id": "TOMEU-INPUTS",
@@ -86,7 +86,17 @@
     },
     "decimal_entry": "El frontend admite coma o punto. El payload JSON contiene números.",
     "interpretation": "Intervalos operativos de revisión de entradas. La evaluación clínica de los resultados sigue requiriendo su contexto.",
-    "error_messages": "La API devuelve HTTP 422 con detail y errors por campo. El frontend muestra el campo y la unidad admitida; creatinina en mg/dL y cistatina C en mg/L."
+    "error_messages": "La API devuelve HTTP 422 con detail y errors por campo. Creatinina en mg/dL o µmol/L y cistatina C en mg/L."
+  },
+  "units_and_precision": {
+    "source": "NIDDK-ADULTS",
+    "conversion": "Creatinina en mg/dL = creatinina en µmol/L / 88.4, sin redondeo a decimales fijos.",
+    "api": "Enviar creatinine_mg_dl o creatinine_umol_l, nunca ambas. Cistatina C en cystatin_mg_l.",
+    "calculation": "float con al menos 53 bits de mantisa y exponente máximo 1024, sin redondeos intermedios en las ecuaciones. Conversión decimal a float antes de calcular.",
+    "presentation": "Valor numérico a un decimal, halfExpand en es-ES, también por encima de 90 y 120; clasificación y discrepancia con el valor original.",
+    "high_values": "Estimaciones menos precisas a filtrados altos, según NIDDK. No se presenta el valor calculado como una medida exacta.",
+    "guideline_difference": "KDIGO 2024, tabla 11, página impresa S184 (PDF 69), recomienda entero más próximo para informes de laboratorio. El decimal es el criterio del proyecto solicitado por Tomeu.",
+    "verification": "Pares de conversión conocidos, entradas SI equivalentes a todos los casos con creatinina, límites de avisos SI, exclusión de ambas unidades y extremos numéricos."
   },
   "discrepancy_rule": {
     "source": "TOMEU-DISCREPANCY",
@@ -113,9 +123,9 @@
       "status": "pendiente de revisión documental del tutor"
     },
     {
-      "id": "UNITS",
-      "description": "La interfaz y la API actuales admiten creatinina en mg/dL. El soporte µmol/L y su conversión 88.4 están pendientes de implementación.",
-      "status": "pendiente de implementación"
+      "id": "REPORTING-CLINICAL-REVIEW",
+      "description": "Revisar con Tomeu la presentación a un decimal frente al entero de KDIGO para laboratorio y concretar la referencia SEN 2025: se localizó el consenso SEN de enfermedad renal diabética de 2025, pero el texto completo no fue accesible (HTTP 403); no se le atribuye una regla de presentación.",
+      "status": "pendiente de revisión documental del tutor"
     }
   ]
 }

@@ -68,6 +68,8 @@ pnpm dev
 
 Abre la dirección que muestre Vite, normalmente [http://localhost:5173](http://localhost:5173/). El frontend se comunica con el backend local en el puerto 8000.
 
+La creatinina admite mg/dL y µmol/L mediante el selector de la página. La API recibe `creatinine_mg_dl` o `creatinine_umol_l` (solo uno); el backend divide µmol/L entre 88,4 antes de calcular. La cistatina C se introduce en mg/L. Las ecuaciones y categorías usan valores sin redondear; la página presenta la estimación con un decimal, incluso por encima de 90 y 120.
+
 Para detener cualquiera de los servicios, pulsa `Ctrl+C` en su terminal.
 
 ## Ejecutar los tests

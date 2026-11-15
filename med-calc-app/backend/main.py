@@ -6,7 +6,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, ValidationInfo, field_validator
 
-from egfr import combined_2021, creatinine_2021, cystatin_2012, gfr_category
+from egfr import combined_2021, creatinine_2021, creatinine_to_mg_dl, cystatin_2012, gfr_category
 
 app = FastAPI(title='MED-CALC', version='0.1.0')
 
@@ -19,20 +19,29 @@ class EgfrInput(BaseModel):
     age: Annotated[int, Field(ge=18, le=120)]
     sex: Literal['F', 'M']
     method: Literal['creatinine', 'cystatin', 'combined']
+    # SI precede a mg/dL para comprobar exclusión y ausencia en el validador de mg/dL.
+    creatinine_umol_l: Biomarker | None = Field(default=None, validate_default=True)
     creatinine_mg_dl: Biomarker | None = Field(default=None, validate_default=True)
     cystatin_mg_l: Biomarker | None = Field(default=None, validate_default=True)
 
-    @field_validator('creatinine_mg_dl', 'cystatin_mg_l')
+    @field_validator('creatinine_umol_l', 'creatinine_mg_dl', 'cystatin_mg_l')
     @classmethod
     def check_biomarker(cls, value: float | None, info: ValidationInfo) -> float | None:
         method = info.data.get('method')
         if method is None:
             return value
-        creatinine = info.field_name == 'creatinine_mg_dl'
+        creatinine = info.field_name != 'cystatin_mg_l'
         required = method in ('creatinine' if creatinine else 'cystatin', 'combined')
-        label, unit = ('creatinina', 'mg/dL') if creatinine else ('cistatina C', 'mg/L')
+        label, unit = ('creatinina', 'µmol/L' if info.field_name == 'creatinine_umol_l' else 'mg/dL') if creatinine else ('cistatina C', 'mg/L')
+        if info.field_name == 'creatinine_mg_dl' and info.data.get('creatinine_umol_l') is not None:
+            if value is not None:
+                raise ValueError('Introduce la creatinina en una sola unidad: mg/dL o µmol/L.')
+            return value
+        if info.field_name == 'creatinine_umol_l' and value is None:
+            return value
         if required and value is None:
-            raise ValueError(f'Introduce una {label} válida en {unit}, mayor que cero.')
+            units = 'mg/dL o µmol/L' if creatinine else unit
+            raise ValueError(f'Introduce una {label} válida en {units}, mayor que cero.')
         if not required and value is not None:
             raise ValueError(f'La {label} en {unit} no corresponde al método seleccionado.')
         return value
@@ -45,7 +54,7 @@ class Estimate(BaseModel):
 
 
 class InputWarning(BaseModel):
-    field: Literal['creatinine_mg_dl', 'cystatin_mg_l']
+    field: Literal['creatinine_mg_dl', 'creatinine_umol_l', 'cystatin_mg_l']
     message: str
 
 
@@ -78,10 +87,12 @@ def compare_estimates(creatinine: Estimate, cystatin: Estimate) -> Discrepancy:
     )
 
 
-def input_warnings(data: EgfrInput) -> list[InputWarning]:
+def input_warnings(data: EgfrInput, creatinine: float | None) -> list[InputWarning]:
     # Límites operativos propuestos por Tomeu y adoptados para revisar entradas.
+    si = data.creatinine_umol_l is not None
     limits = [
-        ('creatinine_mg_dl', data.creatinine_mg_dl, 0.2, 15, 'Creatinina', '0,2–15 mg/dL'),
+        ('creatinine_umol_l' if si else 'creatinine_mg_dl', creatinine, 0.2, 15, 'Creatinina',
+         '17,68–1326 µmol/L' if si else '0,2–15 mg/dL'),
         ('cystatin_mg_l', data.cystatin_mg_l, 0.3, 8, 'Cistatina C', '0,3–8 mg/L'),
     ]
     warnings = []
@@ -107,6 +118,7 @@ async def invalid_input(_request: Request, error: RequestValidationError) -> JSO
         'sex': 'Selecciona el sexo utilizado por la ecuación: F o M.',
         'method': 'Selecciona un método válido: creatinina, cistatina C o combinada.',
         'creatinine_mg_dl': 'Introduce una creatinina válida en mg/dL, mayor que cero y finita.',
+        'creatinine_umol_l': 'Introduce una creatinina válida en µmol/L, mayor que cero y finita.',
         'cystatin_mg_l': 'Introduce una cistatina C válida en mg/L, mayor que cero y finita.',
     }
     errors = {}
@@ -128,7 +140,9 @@ async def invalid_input(_request: Request, error: RequestValidationError) -> JSO
 @app.post('/api/egfr', response_model=EgfrResult)
 def calculate_egfr(data: EgfrInput) -> EgfrResult:
     age, female = data.age, data.sex == 'F'
-    creatinine, cystatin = data.creatinine_mg_dl, data.cystatin_mg_l
+    creatinine = (creatinine_to_mg_dl(data.creatinine_umol_l)
+                  if data.creatinine_umol_l is not None else data.creatinine_mg_dl)
+    cystatin = data.cystatin_mg_l
     comparisons = {}
     try:
         if creatinine is not None and cystatin is not None:
@@ -146,4 +160,4 @@ def calculate_egfr(data: EgfrInput) -> EgfrResult:
 
     discrepancy = compare_estimates(comparisons['creatinine'], comparisons['cystatin']) if comparisons else None
     return EgfrResult(**primary.model_dump(), comparisons=comparisons,
-                      warnings=input_warnings(data), discrepancy=discrepancy)
+                      warnings=input_warnings(data, creatinine), discrepancy=discrepancy)

@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import sys
 import unittest
 from decimal import Decimal
 from math import inf, nextafter
@@ -60,6 +61,30 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                 self.assertEqual(result['unit'], 'mL/min/1.73 m²')
                 equations = {'creatinine': 'CKD-EPI 2021 eGFRcr', 'cystatin': 'CKD-EPI 2012 eGFRcys', 'combined': 'CKD-EPI 2021 eGFRcr-cys'}
                 self.assertEqual(result['equation'], equations[case['method']])
+                if case['creatinine_mg_dl'] is not None:
+                    # La misma entrada física en SI debe conservar resultado, categoría y avisos.
+                    si_payload = {key: value for key, value in payload.items() if key != 'creatinine_mg_dl'}
+                    si_value = float(Decimal(case['creatinine_mg_dl']) * Decimal('88.4'))
+                    si_payload['creatinine_umol_l'] = si_value
+                    si_response = await self.client.post(EGFR_URL, json=si_payload)
+                    self.assertEqual(si_response.status_code, 200, si_response.text)
+                    si_result = si_response.json()
+                    self.assertLessEqual(abs(si_result['value'] - expected), tolerance(expected))
+                    self.assertEqual(si_result['category'], result['category'])
+                    self.assertEqual(si_result['equation'], result['equation'])
+                    self.assertEqual(si_result['unit'], result['unit'])
+                    self.assertEqual([w['field'] for w in si_result['warnings']],
+                                     ['creatinine_umol_l' if w['field'] == 'creatinine_mg_dl' else w['field'] for w in result['warnings']])
+                    for name, comparison in result['comparisons'].items():
+                        self.assertEqual(si_result['comparisons'][name]['category'], comparison['category'])
+                        self.assertLessEqual(abs(si_result['comparisons'][name]['value'] - comparison['value']), tolerance(comparison['value']))
+                    if result['discrepancy'] is not None:
+                        self.assertEqual(si_result['discrepancy']['detected'], result['discrepancy']['detected'])
+                        self.assertEqual(si_result['discrepancy']['different_categories'], result['discrepancy']['different_categories'])
+                    OBSERVATIONS.append({'kind': 'conversion', 'id': case['id'], 'method': case['method'],
+                                         'creatinine_umol_l': si_value, 'expected': case['expected_value'],
+                                         'actual': si_result['value'], 'difference': abs(si_result['value'] - expected),
+                                         'tolerance': tolerance(expected), 'source_ids': ['NIDDK-ADULTS']})
                 if case['method'] == 'combined':
                     self.assertEqual(set(result['comparisons']), {'creatinine', 'cystatin'})
                     for method in ['creatinine', 'cystatin']:
@@ -89,6 +114,7 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
         for method, field, boundaries in [
             ('creatinine', 'creatinine_mg_dl', [(0.199, True), (0.2, False), (0.201, False), (14.999, False), (15, False), (15.001, True)]),
             ('cystatin', 'cystatin_mg_l', [(0.299, True), (0.3, False), (0.301, False), (7.999, False), (8, False), (8.001, True)]),
+            ('creatinine', 'creatinine_umol_l', [(17.5916, True), (17.68, False), (17.7684, False), (1325.9116, False), (1326, False), (1326.0884, True)]),
         ]:
             for value, warned in boundaries:
                 warning_cases.append((method, {field: value}, [field] if warned else []))
@@ -105,7 +131,7 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                 self.assertEqual([warning['field'] for warning in result['warnings']], expected_fields)
                 self.assertGreater(result['value'], 0)
                 for warning in result['warnings']:
-                    unit = 'mg/dL' if warning['field'] == 'creatinine_mg_dl' else 'mg/L'
+                    unit = {'creatinine_mg_dl': 'mg/dL', 'creatinine_umol_l': 'µmol/L', 'cystatin_mg_l': 'mg/L'}[warning['field']]
                     self.assertIn(unit, warning['message'])
 
     async def test_invalid_json_types_and_numeric_extremes(self):
@@ -116,6 +142,7 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                    {'creatinine_mg_dl': 'abc'}, {'creatinine_mg_dl': 0}, {'creatinine_mg_dl': -1},
                    {'creatinine_mg_dl': float('nan')}, {'creatinine_mg_dl': float('inf')},
                    {'creatinine_mg_dl': 1e308}, {'unit': 'µmol/L'}]
+        changes.extend({'creatinine_umol_l': value} for value in [88.4, 0, -1, True, '88.4', float('nan'), float('inf')])
         payloads = [{**valid, **change} for change in changes]
         for missing in ['age', 'sex', 'creatinine_mg_dl']:
             payloads.append({name: value for name, value in valid.items() if name != missing})
@@ -126,6 +153,13 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
             {'method': 'combined', 'cystatin_mg_l': 0.9},
             {'method': 'combined', 'creatinine_mg_dl': 1.2},
             {'method': 'combined', 'creatinine_mg_dl': 1.2, 'cystatin_mg_l': -0.9},
+            {'method': 'cystatin', 'creatinine_umol_l': 88.4, 'cystatin_mg_l': 0.9},
+            {'method': 'creatinine', 'creatinine_umol_l': 0},
+            {'method': 'creatinine', 'creatinine_umol_l': -1},
+            {'method': 'creatinine', 'creatinine_umol_l': True},
+            {'method': 'creatinine', 'creatinine_umol_l': '88.4'},
+            {'method': 'creatinine', 'creatinine_umol_l': 1e308},
+            {'method': 'creatinine', 'creatinine_umol_l': 5e-324},
         ]:
             payloads.append({'age': 62, 'sex': 'F', **fields})
         for payload in payloads:
@@ -171,6 +205,13 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                 self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), digest)
 
     def test_raw_values_against_frozen_reference(self):
+        # Se exige al menos el formato binario de doble precisión para las ecuaciones.
+        self.assertGreaterEqual(sys.float_info.mant_dig, 53)
+        self.assertGreaterEqual(sys.float_info.max_exp, 1024)
+        for si, conventional in [(17.68, 0.2), (61.88, 0.7), (70.72, 0.8), (79.56, 0.9),
+                                 (88.4, 1), (106.08, 1.2), (1326, 15)]:
+            with self.subTest(creatinine_umol_l=si):
+                self.assertEqual(egfr.creatinine_to_mg_dl(si), conventional)
         self.assertEqual(len(CASES), 126)
         self.assertEqual(len({case['id'] for case in CASES}), len(CASES))
         for case in CASES:

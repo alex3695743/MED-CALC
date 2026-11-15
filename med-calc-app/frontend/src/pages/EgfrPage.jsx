@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Icon from '../components/Icon.jsx'
+import { egfrFormat } from '../utils/egfrDisplay.js'
 
 const methods = [
   { id: 'creatinine', label: 'Creatinina', equation: 'CKD-EPI 2021', markers: ['creatinine'] },
@@ -22,8 +23,7 @@ const categories = [
   { code: 'G5', range: '<15', label: 'Filtrado en rango de fallo renal' },
 ]
 
-const egfrFormat = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 })
-const initialValues = { age: '', sex: '', creatinine: '', cystatin: '' }
+const initialValues = { age: '', sex: '', creatinine: '', cystatin: '', creatinineUnit: 'mg/dL' }
 const inputClasses = 'min-h-12 w-full rounded-xl border border-line bg-white px-3.5 text-base text-ink placeholder:text-slate-500 focus:border-teal focus:outline-offset-2 aria-invalid:border-red-600'
 
 function parseBiomarker(value) {
@@ -31,9 +31,15 @@ function parseBiomarker(value) {
   return /^(?:\d+(?:\.\d+)?|\.\d+)$/.test(normalized) ? Number(normalized) : NaN
 }
 
-function plausibilityWarning(name, value) {
+function markerSettings(name, unit) {
+  return name === 'creatinine' && unit === 'µmol/L'
+    ? { ...markers.creatinine, unit, placeholder: 'Ej. 106,08', lower: 17.68, upper: 1326, interval: '17,68–1326 µmol/L' }
+    : markers[name]
+}
+
+function plausibilityWarning(name, value, unit) {
   const number = parseBiomarker(value)
-  const { lower, upper, interval } = markers[name]
+  const { lower, upper, interval } = markerSettings(name, unit)
   if (Number.isFinite(number) && number > 0 && (number < lower || number > upper)) {
     return `Valor fuera del intervalo de revisión de ${interval}. Comprueba el dato y la unidad.`
   }
@@ -60,7 +66,7 @@ function validate(values, method) {
     const number = parseBiomarker(values[marker])
     if (!Number.isFinite(number) || number <= 0) {
       const label = marker === 'creatinine' ? 'creatinina' : 'cistatina C'
-      errors[marker] = `Introduce una ${label} válida en ${markers[marker].unit}, mayor que cero.`
+      errors[marker] = `Introduce una ${label} válida en ${markerSettings(marker, values.creatinineUnit).unit}, mayor que cero.`
     }
   }
 
@@ -88,12 +94,12 @@ function Field({ name, label, unit, error, warning, children }) {
 function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate }) {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
-  const warnings = Object.fromEntries(method.markers.map((name) => [name, plausibilityWarning(name, values[name])]))
+  const warnings = Object.fromEntries(method.markers.map((name) => [name, plausibilityWarning(name, values[name], values.creatinineUnit)]))
 
   function changeValue(event) {
     const { name, value } = event.target
-    setValues((previous) => ({ ...previous, [name]: value }))
-    setErrors((previous) => ({ ...previous, [name]: undefined }))
+    setValues((previous) => ({ ...previous, [name]: value, ...(name === 'creatinineUnit' ? { creatinine: '' } : {}) }))
+    setErrors((previous) => ({ ...previous, [name]: undefined, ...(name === 'creatinineUnit' ? { creatinine: undefined } : {}) }))
     onClear()
   }
 
@@ -175,11 +181,24 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
           <Icon name="chevron" className="pointer-events-none absolute top-1/2 right-3.5 size-4 -translate-y-1/2 text-slate-600" />
         </Field>
         {method.markers.map((name) => {
-          const { label, unit, placeholder } = markers[name]
+          const { label, unit, placeholder } = markerSettings(name, values.creatinineUnit)
           return (
-            <Field key={name} name={name} label={label} unit={unit} error={errors[name]} warning={warnings[name]}>
-              <input {...fieldProps(name, unit)} inputMode="decimal" placeholder={placeholder} className={`${inputClasses} pr-20`} />
-            </Field>
+            <div key={name} className="min-w-0">
+              <Field name={name} label={label} unit={unit} error={errors[name]} warning={warnings[name]}>
+                <input {...fieldProps(name, unit)} inputMode="decimal" placeholder={placeholder} className={`${inputClasses} pr-20`} />
+              </Field>
+              {name === 'creatinine' && (
+                <div className="mt-2">
+                  <label htmlFor="creatinineUnit" className="mr-2 text-xs text-slate-600">Unidad de creatinina</label>
+                  <select id="creatinineUnit" name="creatinineUnit" value={values.creatinineUnit} onChange={changeValue}
+                    aria-describedby="creatinine-unit-help" className="min-h-10 rounded-lg border border-line bg-white px-2 text-sm text-navy">
+                    <option value="mg/dL">mg/dL</option>
+                    <option value="µmol/L">µmol/L</option>
+                  </select>
+                  <p id="creatinine-unit-help" className="mt-1 text-xs text-slate-600">Al cambiar de unidad, introduce de nuevo la creatinina.</p>
+                </div>
+              )}
+            </div>
           )
         })}
       </div>
@@ -350,7 +369,12 @@ function AboutCalculator() {
           <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-2 py-3 text-sm font-bold text-navy">
             Unidades y limitaciones <Icon name="chevron" className="size-4 shrink-0 text-teal group-open:rotate-180" />
           </summary>
-          <p className="pb-4 text-sm leading-relaxed text-slate-700">Introduce creatinina sérica estandarizada en mg/dL y cistatina C estandarizada en mg/L. La eGFR se expresa en mL/min/1,73 m². Un valor aislado es insuficiente para diagnosticar enfermedad renal crónica.</p>
+          <div className="space-y-2 pb-4 text-sm leading-relaxed text-slate-700">
+            <p>Introduce creatinina sérica estandarizada en mg/dL o µmol/L y cistatina C estandarizada en mg/L. Para calcular, la creatinina en µmol/L se divide entre 88,4. La eGFR se expresa en mL/min/1,73 m². Un valor aislado es insuficiente para diagnosticar enfermedad renal crónica.</p>
+            <p>La calculadora muestra la estimación numérica con un decimal, también por encima de 90 y 120. El redondeo se aplica solo al mostrar el resultado; las categorías y los avisos utilizan el valor sin redondear. Las estimaciones son menos precisas cuando el filtrado es alto.</p>
+            <p>Esta presentación a un decimal sigue el criterio del proyecto. Para informes de laboratorio, KDIGO 2024 recomienda redondear la eGFR al entero más próximo.</p>
+            <p><a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/glomerular-filtration-rate-equations/adults" className="font-semibold text-teal underline underline-offset-4">NIDDK · Ecuaciones y conversión de unidades</a>{' · '}<a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf#page=69" className="font-semibold text-teal underline underline-offset-4">KDIGO 2024 · Presentación en laboratorio</a></p>
+          </div>
         </details>
         <details className="group">
           <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-2 py-3 text-sm font-bold text-navy">
@@ -411,7 +435,10 @@ export default function EgfrPage() {
     setCalculation({ pending: true })
 
     const body = { age: Number(values.age), sex: values.sex, method: method.id }
-    if (method.markers.includes('creatinine')) body.creatinine_mg_dl = parseBiomarker(values.creatinine)
+    if (method.markers.includes('creatinine')) {
+      const field = values.creatinineUnit === 'µmol/L' ? 'creatinine_umol_l' : 'creatinine_mg_dl'
+      body[field] = parseBiomarker(values.creatinine)
+    }
     if (method.markers.includes('cystatin')) body.cystatin_mg_l = parseBiomarker(values.cystatin)
 
     try {
@@ -424,7 +451,7 @@ export default function EgfrPage() {
       if (response.status === 422) {
         const failure = await response.json()
         if (!request.signal.aborted) {
-          const fieldNames = { age: 'age', sex: 'sex', creatinine_mg_dl: 'creatinine', cystatin_mg_l: 'cystatin' }
+          const fieldNames = { age: 'age', sex: 'sex', creatinine_mg_dl: 'creatinine', creatinine_umol_l: 'creatinine', cystatin_mg_l: 'cystatin' }
           const fieldErrors = Object.fromEntries(Object.entries(failure.errors || {})
             .filter(([name, message]) => fieldNames[name] && typeof message === 'string')
             .map(([name, message]) => [fieldNames[name], message]))

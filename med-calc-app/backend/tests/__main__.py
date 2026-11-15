@@ -89,6 +89,7 @@ def main():
         'pending_criteria': sources['pending_criteria'],
         'input_validation': sources['input_validation'],
         'discrepancy_rule': sources['discrepancy_rule'],
+        'units_and_precision': sources['units_and_precision'],
     }
     reports = TESTS / 'reports'
     reports.mkdir(exist_ok=True)

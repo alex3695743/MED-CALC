@@ -1,4 +1,13 @@
 from bisect import bisect_right
+from decimal import Decimal, localcontext
+
+
+def creatinine_to_mg_dl(value: float) -> float:
+    # NIDDK: µmol/L ÷ 88,4, sin redondear a un número fijo de decimales.
+    # Decimal evita falsos avisos en límites exactos como 17,68 µmol/L = 0,2 mg/dL.
+    with localcontext() as context:
+        context.prec = 34
+        return float(Decimal(str(value)) / Decimal('88.4'))
 
 
 # CKD-EPI para adultos. Fuente: NIDDK, eGFR Equations for Adults.
