@@ -1,5 +1,30 @@
 from bisect import bisect_right
 from decimal import Decimal, localcontext
+from math import isfinite
+
+
+# KDIGO 2024, nomenclatura CGA (S126, PDF 11). Filas G, columnas A1–A3.
+KDIGO_RISK_MATRIX = {
+    'G1': ('low', 'moderate', 'high'),
+    'G2': ('low', 'moderate', 'high'),
+    'G3a': ('moderate', 'high', 'very_high'),
+    'G3b': ('high', 'very_high', 'very_high'),
+    'G4': ('very_high', 'very_high', 'very_high'),
+    'G5': ('very_high', 'very_high', 'very_high'),
+}
+
+
+def albuminuria_category(acr_mg_g: float) -> str:
+    # Tabla 3: 30 y 300 mg/g están incluidos en A2; cero no equivale a dato ausente.
+    if not isfinite(acr_mg_g) or acr_mg_g < 0:
+        raise ValueError('Introduce un CAC válido en mg/g, mayor o igual que cero y finito.')
+    if acr_mg_g < 30:
+        return 'A1'
+    return 'A2' if acr_mg_g <= 300 else 'A3'
+
+
+def kdigo_risk_level(gfr: str, albuminuria: str) -> str:
+    return KDIGO_RISK_MATRIX[gfr][('A1', 'A2', 'A3').index(albuminuria)]
 
 
 def creatinine_to_mg_dl(value: float) -> float:

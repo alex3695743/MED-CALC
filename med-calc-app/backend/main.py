@@ -6,7 +6,8 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, ValidationInfo, field_validator
 
-from egfr import combined_2021, creatinine_2021, creatinine_to_mg_dl, cystatin_2012, gfr_category
+from egfr import (KDIGO_RISK_MATRIX, albuminuria_category, combined_2021, creatinine_2021,
+                  creatinine_to_mg_dl, cystatin_2012, gfr_category, kdigo_risk_level)
 
 app = FastAPI(title='MED-CALC', version='0.1.0')
 
@@ -23,6 +24,7 @@ class EgfrInput(BaseModel):
     creatinine_umol_l: Biomarker | None = Field(default=None, validate_default=True)
     creatinine_mg_dl: Biomarker | None = Field(default=None, validate_default=True)
     cystatin_mg_l: Biomarker | None = Field(default=None, validate_default=True)
+    acr_mg_g: Annotated[float, Field(ge=0, allow_inf_nan=False)] | None = None
 
     @field_validator('creatinine_umol_l', 'creatinine_mg_dl', 'cystatin_mg_l')
     @classmethod
@@ -66,11 +68,33 @@ class Discrepancy(BaseModel):
     message: str | None = None
 
 
+RiskLevel = Literal['low', 'moderate', 'high', 'very_high']
+
+
+class KdigoAssessment(BaseModel):
+    acr_mg_g: float
+    gfr_category: str
+    albuminuria_category: Literal['A1', 'A2', 'A3']
+    risk_level: RiskLevel
+    risk_label: str
+    risk_matrix: dict[str, tuple[RiskLevel, RiskLevel, RiskLevel]]
+
+
 class EgfrResult(Estimate):
     unit: Literal['mL/min/1.73 m²'] = 'mL/min/1.73 m²'
     comparisons: dict[Literal['creatinine', 'cystatin'], Estimate] = Field(default_factory=dict)
     warnings: list[InputWarning] = Field(default_factory=list)
     discrepancy: Discrepancy | None = None
+    kdigo: KdigoAssessment | None = None
+
+
+def assess_kdigo(gfr: str, acr_mg_g: float) -> KdigoAssessment:
+    albuminuria = albuminuria_category(acr_mg_g)
+    risk = kdigo_risk_level(gfr, albuminuria)
+    labels = {'low': 'Riesgo bajo', 'moderate': 'Riesgo moderado',
+              'high': 'Riesgo alto', 'very_high': 'Riesgo muy alto'}
+    return KdigoAssessment(acr_mg_g=acr_mg_g, gfr_category=gfr, albuminuria_category=albuminuria,
+                           risk_level=risk, risk_label=labels[risk], risk_matrix=KDIGO_RISK_MATRIX)
 
 
 def compare_estimates(creatinine: Estimate, cystatin: Estimate) -> Discrepancy:
@@ -120,6 +144,7 @@ async def invalid_input(_request: Request, error: RequestValidationError) -> JSO
         'creatinine_mg_dl': 'Introduce una creatinina válida en mg/dL, mayor que cero y finita.',
         'creatinine_umol_l': 'Introduce una creatinina válida en µmol/L, mayor que cero y finita.',
         'cystatin_mg_l': 'Introduce una cistatina C válida en mg/L, mayor que cero y finita.',
+        'acr_mg_g': 'Introduce un CAC válido en mg/g, mayor o igual que cero y finito.',
     }
     errors = {}
     for issue in error.errors():
@@ -160,4 +185,5 @@ def calculate_egfr(data: EgfrInput) -> EgfrResult:
 
     discrepancy = compare_estimates(comparisons['creatinine'], comparisons['cystatin']) if comparisons else None
     return EgfrResult(**primary.model_dump(), comparisons=comparisons,
-                      warnings=input_warnings(data, creatinine), discrepancy=discrepancy)
+                      warnings=input_warnings(data, creatinine), discrepancy=discrepancy,
+                      kdigo=assess_kdigo(primary.category, data.acr_mg_g) if data.acr_mg_g is not None else None)

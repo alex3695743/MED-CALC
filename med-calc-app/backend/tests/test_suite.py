@@ -22,6 +22,16 @@ SOURCES = json.loads((DATA / 'sources.json').read_text(encoding='utf-8'))
 CASES = json.loads((DATA / 'reference-cases.json').read_text(encoding='utf-8'))
 OBSERVATIONS = []
 
+# Resultados esperados transcritos de la matriz KDIGO 2024, S126 (PDF 11).
+EXPECTED_KDIGO_RISKS = {
+    'G1': ('low', 'moderate', 'high'),
+    'G2': ('low', 'moderate', 'high'),
+    'G3a': ('moderate', 'high', 'very_high'),
+    'G3b': ('high', 'very_high', 'very_high'),
+    'G4': ('very_high', 'very_high', 'very_high'),
+    'G5': ('very_high', 'very_high', 'very_high'),
+}
+
 
 def actual_value(case):
     args = [case['age'], case['sex'] == 'F']
@@ -55,6 +65,7 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                 response = await self.client.post(EGFR_URL, json=payload)
                 self.assertEqual(response.status_code, 200, response.text)
                 result = response.json()
+                self.assertIsNone(result['kdigo'])
                 expected = float(case['expected_value'])
                 self.assertLessEqual(abs(result['value'] - expected), tolerance(expected))
                 self.assertEqual(result['category'], case['expected_category'])
@@ -134,6 +145,45 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                     unit = {'creatinine_mg_dl': 'mg/dL', 'creatinine_umol_l': 'µmol/L', 'cystatin_mg_l': 'mg/L'}[warning['field']]
                     self.assertIn(unit, warning['message'])
 
+        # Las 18 celdas G×A a través de la API, sin modificar la eGFR original.
+        for gfr, cr in [('G1', 0.5), ('G2', 1), ('G3a', 1.2), ('G3b', 1.7), ('G4', 2.5), ('G5', 5)]:
+            payload = {'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': cr}
+            baseline = (await self.client.post(EGFR_URL, json=payload)).json()
+            self.assertEqual(baseline['category'], gfr)
+            for index, (acr, albuminuria) in enumerate([(10, 'A1'), (80, 'A2'), (500, 'A3')]):
+                with self.subTest(gfr=gfr, albuminuria=albuminuria):
+                    response = await self.client.post(EGFR_URL, json={**payload, 'acr_mg_g': acr})
+                    self.assertEqual(response.status_code, 200, response.text)
+                    result = response.json()
+                    self.assertEqual(result['value'], baseline['value'])
+                    assessment = result['kdigo']
+                    self.assertEqual(assessment['acr_mg_g'], acr)
+                    self.assertEqual(assessment['gfr_category'], gfr)
+                    self.assertEqual(assessment['albuminuria_category'], albuminuria)
+                    self.assertEqual(assessment['risk_level'], EXPECTED_KDIGO_RISKS[gfr][index])
+                    self.assertEqual(assessment['risk_matrix'], {key: list(value) for key, value in EXPECTED_KDIGO_RISKS.items()})
+                    self.assertTrue(assessment['risk_label'])
+                    OBSERVATIONS.append({'kind': 'kdigo', 'gfr_category': gfr, 'acr_mg_g': acr,
+                                         'albuminuria_category': albuminuria, 'risk_level': assessment['risk_level'],
+                                         'source_ids': ['KDIGO-2024']})
+
+        # Cero es un CAC válido; ausencia y null no deben asignar A1 por defecto.
+        for method, fields in [('creatinine', {'creatinine_umol_l': 106.08}),
+                               ('cystatin', {'cystatin_mg_l': 0.9}),
+                               ('combined', {'creatinine_mg_dl': 1.2, 'cystatin_mg_l': 0.9})]:
+            payload = {'age': 62, 'sex': 'F', 'method': method, **fields}
+            for acr, expected in [(None, None), (0, 'A1'), (29.999, 'A1'), (30, 'A2'),
+                                  (300, 'A2'), (300.001, 'A3'), (1e308, 'A3')]:
+                with self.subTest(method=method, acr=acr):
+                    response = await self.client.post(EGFR_URL, json={**payload, 'acr_mg_g': acr})
+                    self.assertEqual(response.status_code, 200, response.text)
+                    result = response.json()
+                    if expected is None:
+                        self.assertIsNone(result['kdigo'])
+                    else:
+                        self.assertEqual(result['kdigo']['albuminuria_category'], expected)
+                        self.assertEqual(result['kdigo']['gfr_category'], result['category'])
+
     async def test_invalid_json_types_and_numeric_extremes(self):
         valid = {'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2}
         changes = [{'age': 17}, {'age': 121}, {'age': 200}, {'age': None}, {'age': True}, {'age': 62.5}, {'age': '62'},
@@ -143,6 +193,7 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                    {'creatinine_mg_dl': float('nan')}, {'creatinine_mg_dl': float('inf')},
                    {'creatinine_mg_dl': 1e308}, {'unit': 'µmol/L'}]
         changes.extend({'creatinine_umol_l': value} for value in [88.4, 0, -1, True, '88.4', float('nan'), float('inf')])
+        changes.extend({'acr_mg_g': value} for value in [-1, -1e-300, True, '80', '', [], {}, float('nan'), float('inf')])
         payloads = [{**valid, **change} for change in changes]
         for missing in ['age', 'sex', 'creatinine_mg_dl']:
             payloads.append({name: value for name, value in valid.items() if name != missing})
@@ -187,6 +238,7 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
             ({'method': 'combined', 'cystatin_mg_l': 0}, 'cystatin_mg_l', 'cistatina C válida en mg/L'),
             ({'method': 'combined'}, 'cystatin_mg_l', 'cistatina C válida en mg/L'),
             ({'cystatin_mg_l': 1}, 'cystatin_mg_l', 'método seleccionado'),
+            ({'acr_mg_g': -1}, 'acr_mg_g', 'CAC válido en mg/g'),
         ]:
             with self.subTest(change=change):
                 response = await self.client.post(EGFR_URL, json={**valid, **change})
@@ -247,6 +299,20 @@ class EgfrTests(unittest.IsolatedAsyncioTestCase):
                     self.assertLessEqual(abs(actual - float(external)), 0.50000001)
 
     def test_kdigo_boundary_neighbourhood(self):
+        for value, expected in [(0, 'A1'), (nextafter(30, -inf), 'A1'), (30, 'A2'),
+                                (nextafter(30, inf), 'A2'), (nextafter(300, -inf), 'A2'),
+                                (300, 'A2'), (nextafter(300, inf), 'A3')]:
+            with self.subTest(acr_mg_g=value):
+                self.assertEqual(egfr.albuminuria_category(value), expected)
+        for invalid in [-1, float('nan'), inf]:
+            with self.subTest(acr_mg_g=invalid):
+                with self.assertRaises(ValueError):
+                    egfr.albuminuria_category(invalid)
+        for gfr, risks in EXPECTED_KDIGO_RISKS.items():
+            for index, albuminuria in enumerate(['A1', 'A2', 'A3']):
+                with self.subTest(gfr=gfr, albuminuria=albuminuria):
+                    self.assertEqual(egfr.kdigo_risk_level(gfr, albuminuria), risks[index])
+
         for boundary, below, above in [(15, 'G5', 'G4'), (30, 'G4', 'G3b'), (45, 'G3b', 'G3a'), (60, 'G3a', 'G2'), (90, 'G2', 'G1')]:
             for value, expected in [(boundary - 0.001, below), (nextafter(boundary, -inf), below), (boundary, above), (boundary + 0.001, above)]:
                 with self.subTest(value=value):

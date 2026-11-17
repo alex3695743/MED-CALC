@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Icon from '../components/Icon.jsx'
+import KdigoAssessment from '../components/KdigoAssessment.jsx'
 import { egfrFormat } from '../utils/egfrDisplay.js'
 
 const methods = [
@@ -23,7 +24,7 @@ const categories = [
   { code: 'G5', range: '<15', label: 'Filtrado en rango de fallo renal' },
 ]
 
-const initialValues = { age: '', sex: '', creatinine: '', cystatin: '', creatinineUnit: 'mg/dL' }
+const initialValues = { age: '', sex: '', creatinine: '', cystatin: '', creatinineUnit: 'mg/dL', acr: '' }
 const inputClasses = 'min-h-12 w-full rounded-xl border border-line bg-white px-3.5 text-base text-ink placeholder:text-slate-500 focus:border-teal focus:outline-offset-2 aria-invalid:border-red-600'
 
 function parseBiomarker(value) {
@@ -46,7 +47,7 @@ function plausibilityWarning(name, value, unit) {
   return undefined
 }
 
-function validate(values, method) {
+function validate(values, method, includeAlbuminuria) {
   const errors = {}
   const age = values.age.trim()
 
@@ -70,6 +71,10 @@ function validate(values, method) {
     }
   }
 
+  if (includeAlbuminuria && values.acr.trim() !== '') {
+    const acr = parseBiomarker(values.acr)
+    if (!Number.isFinite(acr) || acr < 0) errors.acr = 'Introduce un CAC válido en mg/g, mayor o igual que cero.'
+  }
   return errors
 }
 
@@ -94,6 +99,7 @@ function Field({ name, label, unit, error, warning, children }) {
 function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate }) {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
+  const [includeAlbuminuria, setIncludeAlbuminuria] = useState(false)
   const warnings = Object.fromEntries(method.markers.map((name) => [name, plausibilityWarning(name, values[name], values.creatinineUnit)]))
 
   function changeValue(event) {
@@ -104,14 +110,14 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
   }
 
   function changeMethod(option) {
-    setErrors(({ age, sex }) => ({ age, sex }))
+    setErrors(({ age, sex, acr }) => ({ age, sex, acr }))
     onMethodChange(option)
   }
 
   function submit(event) {
     event.preventDefault()
     const form = event.currentTarget
-    const nextErrors = validate(values, method)
+    const nextErrors = validate(values, method, includeAlbuminuria)
     setErrors(nextErrors)
 
     const [firstInvalid] = Object.keys(nextErrors)
@@ -121,13 +127,14 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
       return
     }
 
-    onCalculate(values, setErrors)
+    onCalculate({ ...values, acr: includeAlbuminuria ? values.acr : '' }, setErrors)
   }
 
   function reset(event) {
     event.preventDefault()
     setValues(initialValues)
     setErrors({})
+    setIncludeAlbuminuria(false)
     onClear()
     event.currentTarget.elements.namedItem('age')?.focus()
   }
@@ -139,7 +146,7 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
       name,
       value: values[name],
       onChange: changeValue,
-      required: true,
+      required: name !== 'acr',
       'aria-invalid': Boolean(errors[name]),
       'aria-describedby': descriptions.join(' ') || undefined,
     }
@@ -150,6 +157,11 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
       className="rounded-2xl border border-line bg-white p-5 shadow-card sm:p-7">
       <h2 id="form-title" className="text-xl font-bold tracking-tight text-navy">Datos para el cálculo</h2>
       <p className="mt-1 text-sm text-slate-600">Selecciona los marcadores disponibles e introduce sus valores.</p>
+
+      <aside aria-labelledby="clinical-notice-title" className="mt-5 rounded-xl border border-teal/20 bg-mist p-3.5 text-sm leading-relaxed text-slate-700">
+        <p id="clinical-notice-title" className="flex items-center gap-2 font-bold text-navy"><Icon name="info" className="size-4 shrink-0 text-teal" /> Uso y limitaciones</p>
+        <p className="mt-1.5">Herramienta de apoyo para personas adultas. No sustituye el juicio clínico ni la valoración del laboratorio. La estimación puede ser poco fiable en lesión renal aguda o cuando la función renal cambia rápidamente.</p>
+      </aside>
 
       <fieldset className="mt-6">
         <legend className="mb-2.5 text-sm font-bold text-navy">Método de estimación</legend>
@@ -204,6 +216,28 @@ function CalculatorForm({ method, pending, onMethodChange, onClear, onCalculate 
       </div>
       <p className="mt-4 text-xs leading-relaxed text-slate-600">Edad admitida de 18 a 120 años. Los avisos de revisión de biomarcadores permiten continuar el cálculo.</p>
 
+      <div className="mt-5 rounded-xl border border-line bg-mist p-3.5">
+        <button type="button" aria-expanded={includeAlbuminuria} aria-controls="albuminuria-input"
+          onClick={() => {
+            setIncludeAlbuminuria((previous) => !previous)
+            setValues((previous) => ({ ...previous, acr: '' }))
+            setErrors((previous) => ({ ...previous, acr: undefined }))
+            onClear()
+          }}
+          className="flex min-h-10 w-full items-center justify-between gap-3 text-left text-sm font-bold text-navy">
+          {includeAlbuminuria ? 'Quitar albuminuria' : 'Añadir albuminuria'}
+          <Icon name="chevron" className={`size-4 shrink-0 text-teal ${includeAlbuminuria ? 'rotate-180' : ''}`} />
+        </button>
+        {includeAlbuminuria && (
+          <div id="albuminuria-input" className="mt-3">
+            <Field name="acr" label="Cociente albúmina/creatinina en orina (CAC o ACR)" unit="mg/g" error={errors.acr}>
+              <input {...fieldProps('acr', 'mg/g')} inputMode="decimal" placeholder="Ej. 80" aria-describedby={`acr-unit acr-help${errors.acr ? ' acr-error' : ''}`} className={`${inputClasses} pr-20`} />
+            </Field>
+            <p id="acr-help" className="mt-2 text-xs leading-relaxed text-slate-600">Introduce el cociente ya calculado de tu análisis de orina, en mg/g. No es la albúmina en sangre ni una concentración aislada en orina. Si no dispones del CAC, deja el campo vacío; la eGFR se calculará igualmente.</p>
+          </div>
+        )}
+      </div>
+
       <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-line pt-5">
         <button type="submit" disabled={pending} className="inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-navy px-5 text-sm font-bold text-white transition hover:bg-[#0c293e] disabled:opacity-60">
           {pending ? 'Calculando…' : 'Calcular eGFR'} <Icon name="arrow" className="size-4" />
@@ -220,7 +254,7 @@ function CategoryScale({ category, hasResult }) {
   return (
     <div className="mt-5">
       <div className="flex flex-wrap items-center justify-between gap-x-3">
-        <h3 id="egfr-scale-title" className="text-sm font-semibold text-slate-200">Categoría de filtrado KDIGO</h3>
+        <h3 id="egfr-scale-title" className="text-sm font-semibold text-slate-200">Categoría de filtrado G</h3>
         <button type="button" aria-haspopup="dialog" aria-controls="egfr-kdigo-guide"
           onClick={() => guideRef.current.showModal()}
           className="inline-flex min-h-11 items-center gap-1.5 rounded-lg text-sm font-semibold text-[#aeeae3] underline underline-offset-4 hover:text-white focus-visible:outline-[#9ee6de]">
@@ -338,6 +372,11 @@ export function ResultPanel({ method, pending, error, panelRef, result }) {
           </div>
         )}
         <CategoryScale category={category} hasResult={hasResult} />
+        {hasResult && (result.kdigo ? (
+          <KdigoAssessment assessment={result.kdigo} />
+        ) : (
+          <p className="mt-4 text-xs leading-relaxed text-slate-200">Añade el CAC en el apartado de albuminuria para completar la valoración G×A. Sin ese dato no se asigna categoría de albuminuria.</p>
+        ))}
       </div>
       <div ref={panelRef} tabIndex={-1} className="flex scroll-mt-4 items-start gap-2.5 border-t border-white/15 bg-[#0d2a40] px-5 py-4 text-sm text-slate-200 outline-offset-[-4px] focus-visible:outline-[#9ee6de] sm:px-6">
         <Icon name="info" className="mt-0.5 size-4 shrink-0 text-[#9ee6de]" />
@@ -363,7 +402,7 @@ function AboutCalculator() {
           <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-2 py-3 text-sm font-bold text-navy">
             Población y alcance <Icon name="chevron" className="size-4 shrink-0 text-teal group-open:rotate-180" />
           </summary>
-          <p className="pb-4 text-sm leading-relaxed text-slate-700">La ficha recoge tres ecuaciones CKD-EPI para personas adultas. Cada ecuación utiliza la edad, el sexo y el marcador o los marcadores correspondientes.</p>
+          <p className="pb-4 text-sm leading-relaxed text-slate-700">La ficha recoge tres ecuaciones CKD-EPI para personas adultas de 18 años o más. Estas ecuaciones no deben utilizarse en población pediátrica. Cada ecuación utiliza la edad, el sexo y el marcador o los marcadores correspondientes.</p>
         </details>
         <details className="group">
           <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-2 py-3 text-sm font-bold text-navy">
@@ -371,9 +410,12 @@ function AboutCalculator() {
           </summary>
           <div className="space-y-2 pb-4 text-sm leading-relaxed text-slate-700">
             <p>Introduce creatinina sérica estandarizada en mg/dL o µmol/L y cistatina C estandarizada en mg/L. Para calcular, la creatinina en µmol/L se divide entre 88,4. La eGFR se expresa en mL/min/1,73 m². Un valor aislado es insuficiente para diagnosticar enfermedad renal crónica.</p>
+            <p>La eGFR está ajustada a una superficie corporal estándar de <strong>1,73 m²</strong>. No representa directamente el filtrado absoluto de esa persona en mL/min. El filtrado glomerular y el flujo plasmático renal son magnitudes diferentes: quitar el ajuste por superficie corporal no convierte uno en el otro.</p>
+            <p>Estas estimaciones requieren interpretar los resultados en su contexto. Pueden ser poco fiables en lesión renal aguda o ante cambios rápidos de la función renal.</p>
             <p>La calculadora muestra la estimación numérica con un decimal, también por encima de 90 y 120. El redondeo se aplica solo al mostrar el resultado; las categorías y los avisos utilizan el valor sin redondear. Las estimaciones son menos precisas cuando el filtrado es alto.</p>
             <p>Esta presentación a un decimal sigue el criterio del proyecto. Para informes de laboratorio, KDIGO 2024 recomienda redondear la eGFR al entero más próximo.</p>
             <p><a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/glomerular-filtration-rate-equations/adults" className="font-semibold text-teal underline underline-offset-4">NIDDK · Ecuaciones y conversión de unidades</a>{' · '}<a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf#page=69" className="font-semibold text-teal underline underline-offset-4">KDIGO 2024 · Presentación en laboratorio</a></p>
+            <p><a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers" className="font-semibold text-teal underline underline-offset-4">NIDDK · Ajuste por superficie corporal</a></p>
           </div>
         </details>
         <details className="group">
@@ -381,9 +423,9 @@ function AboutCalculator() {
             ¿Cuándo puede ayudar la cistatina C? <Icon name="chevron" className="size-4 shrink-0 text-teal group-open:rotate-180" />
           </summary>
           <div className="space-y-2 pb-4 text-sm leading-relaxed text-slate-700">
-            <p>La <strong>creatinina</strong> puede variar por la masa muscular, la alimentación y otras circunstancias, además de la función renal. Por eso, una estimación basada solo en creatinina puede ser menos fiable, por ejemplo, en personas con muy poca o mucha masa muscular.</p>
-            <p>La <strong>cistatina C</strong> puede aportar información adicional en estas situaciones, pero también tiene limitaciones: las alteraciones de la tiroides, los corticoides y la inflamación pueden modificar sus niveles. Su interpretación requiere tener en cuenta el contexto clínico.</p>
-            <p><a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/factors-affecting-egfr-accuracy/clinical-measurements" className="font-semibold text-teal underline underline-offset-4">NIDDK · Factores que afectan a la estimación del filtrado</a></p>
+            <p>La <strong>creatinina</strong> puede variar por la masa muscular, la nutrición, la dieta y otras circunstancias, además de la función renal. Por eso, una estimación basada solo en creatinina puede ser menos fiable, por ejemplo, en personas con muy poca o mucha masa muscular.</p>
+            <p>La <strong>cistatina C</strong> puede aportar información adicional en estas situaciones, pero también tiene limitaciones: las alteraciones tiroideas no tratadas, los corticoides y la inflamación pueden modificar sus niveles. Su interpretación requiere tener en cuenta el contexto clínico.</p>
+            <p><a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/factors-affecting-egfr-accuracy/clinical-measurements" className="font-semibold text-teal underline underline-offset-4">NIDDK · Factores que afectan a la estimación del filtrado</a>{' · '}<a href="https://www.kidney.org/kidney-topics/cystatin-c" className="font-semibold text-teal underline underline-offset-4">NKF · Cistatina C</a></p>
           </div>
         </details>
         <details className="group">
@@ -440,6 +482,7 @@ export default function EgfrPage() {
       body[field] = parseBiomarker(values.creatinine)
     }
     if (method.markers.includes('cystatin')) body.cystatin_mg_l = parseBiomarker(values.cystatin)
+    if (values.acr.trim() !== '') body.acr_mg_g = parseBiomarker(values.acr)
 
     try {
       const response = await fetch('/api/egfr', {
@@ -451,7 +494,7 @@ export default function EgfrPage() {
       if (response.status === 422) {
         const failure = await response.json()
         if (!request.signal.aborted) {
-          const fieldNames = { age: 'age', sex: 'sex', creatinine_mg_dl: 'creatinine', creatinine_umol_l: 'creatinine', cystatin_mg_l: 'cystatin' }
+          const fieldNames = { age: 'age', sex: 'sex', creatinine_mg_dl: 'creatinine', creatinine_umol_l: 'creatinine', cystatin_mg_l: 'cystatin', acr_mg_g: 'acr' }
           const fieldErrors = Object.fromEntries(Object.entries(failure.errors || {})
             .filter(([name, message]) => fieldNames[name] && typeof message === 'string')
             .map(([name, message]) => [fieldNames[name], message]))

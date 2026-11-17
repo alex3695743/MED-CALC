@@ -1,20 +1,21 @@
 {
-  "generated_at_utc": "2026-11-15T23:03:16.459868+00:00",
+  "generated_at_utc": "2026-11-17T15:53:31.591340+00:00",
   "status": "PASSED",
   "strict_mode": false,
   "exit_code": 0,
   "python": "3.12.14",
   "platform": "Windows-11-10.0.26200-SP0",
-  "reference_set_version": "1.0.5",
+  "reference_set_version": "1.0.6",
   "clinical_signoff": "pendiente de Tomeu",
   "test_methods": 6,
   "observations_by_kind": {
     "conversion": 96,
+    "kdigo": 18,
     "nkf": 24,
     "raw": 126
   },
   "events_by_status": {
-    "passed": 413
+    "passed": 490
   },
   "maximum_raw_absolute_error": 2.8421709430404007e-13,
   "events": [
@@ -868,6 +869,201 @@
       "detail": ""
     },
     {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G1', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G1', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G1', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G2', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G2', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G2', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G3a', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G3a', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G3a', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G3b', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G3b', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G3b', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G4', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G4', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G4', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G5', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G5', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (gfr='G5', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=None)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=0)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=29.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=30)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=300)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=300.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='creatinine', acr=1e+308)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=None)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=0)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=29.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=30)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=300)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=300.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='cystatin', acr=1e+308)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=None)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=0)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=29.999)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=30)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=300)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=300.001)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_frozen_cases_through_api (tests.test_suite.EgfrTests.test_frozen_cases_through_api) (method='combined', acr=1e+308)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
       "id": "tests.test_suite.EgfrTests.test_frozen_cases_through_api",
       "status": "passed"
     },
@@ -993,6 +1189,51 @@
     },
     {
       "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'creatinine_umol_l': inf})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': -1})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': -1e-300})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': True})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': '80'})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': ''})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': []})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': {}})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': nan})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (payload={'age': 62, 'sex': 'F', 'method': 'creatinine', 'creatinine_mg_dl': 1.2, 'acr_mg_g': inf})",
       "status": "passed",
       "detail": ""
     },
@@ -1142,8 +1383,153 @@
       "detail": ""
     },
     {
+      "id": "test_invalid_json_types_and_numeric_extremes (tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes) (change={'acr_mg_g': -1})",
+      "status": "passed",
+      "detail": ""
+    },
+    {
       "id": "tests.test_suite.EgfrTests.test_invalid_json_types_and_numeric_extremes",
       "status": "passed"
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=0)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=29.999999999999996)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=30)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=30.000000000000004)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=299.99999999999994)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=300)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=300.00000000000006)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=-1)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=nan)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (acr_mg_g=inf)",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G1', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G1', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G1', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G2', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G2', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G2', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G3a', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G3a', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G3a', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G3b', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G3b', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G3b', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G4', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G4', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G4', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G5', albuminuria='A1')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G5', albuminuria='A2')",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (gfr='G5', albuminuria='A3')",
+      "status": "passed",
+      "detail": ""
     },
     {
       "id": "test_kdigo_boundary_neighbourhood (tests.test_suite.EgfrTests.test_kdigo_boundary_neighbourhood) (value=14.999)",
@@ -3325,6 +3711,186 @@
       "tolerance": 1.7869353251519624e-08,
       "source_ids": [
         "NIDDK-ADULTS"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G1",
+      "acr_mg_g": 10,
+      "albuminuria_category": "A1",
+      "risk_level": "low",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G1",
+      "acr_mg_g": 80,
+      "albuminuria_category": "A2",
+      "risk_level": "moderate",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G1",
+      "acr_mg_g": 500,
+      "albuminuria_category": "A3",
+      "risk_level": "high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G2",
+      "acr_mg_g": 10,
+      "albuminuria_category": "A1",
+      "risk_level": "low",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G2",
+      "acr_mg_g": 80,
+      "albuminuria_category": "A2",
+      "risk_level": "moderate",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G2",
+      "acr_mg_g": 500,
+      "albuminuria_category": "A3",
+      "risk_level": "high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G3a",
+      "acr_mg_g": 10,
+      "albuminuria_category": "A1",
+      "risk_level": "moderate",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G3a",
+      "acr_mg_g": 80,
+      "albuminuria_category": "A2",
+      "risk_level": "high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G3a",
+      "acr_mg_g": 500,
+      "albuminuria_category": "A3",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G3b",
+      "acr_mg_g": 10,
+      "albuminuria_category": "A1",
+      "risk_level": "high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G3b",
+      "acr_mg_g": 80,
+      "albuminuria_category": "A2",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G3b",
+      "acr_mg_g": 500,
+      "albuminuria_category": "A3",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G4",
+      "acr_mg_g": 10,
+      "albuminuria_category": "A1",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G4",
+      "acr_mg_g": 80,
+      "albuminuria_category": "A2",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G4",
+      "acr_mg_g": 500,
+      "albuminuria_category": "A3",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G5",
+      "acr_mg_g": 10,
+      "albuminuria_category": "A1",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G5",
+      "acr_mg_g": 80,
+      "albuminuria_category": "A2",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
+      ]
+    },
+    {
+      "kind": "kdigo",
+      "gfr_category": "G5",
+      "acr_mg_g": 500,
+      "albuminuria_category": "A3",
+      "risk_level": "very_high",
+      "source_ids": [
+        "KDIGO-2024"
       ]
     },
     {
@@ -6185,16 +6751,16 @@
     }
   ],
   "tested_files_sha256": {
-    "egfr.py": "563cffe5de638444dfff11b6c3bb276a505fb9860550a698a4665f81c90bbc65",
-    "main.py": "fbeecd7fb1d439bc4c33982e873038ced3203185b283268185cb6a4055d799a7",
+    "egfr.py": "4efc7c5993241672d6b2c13bce8d46f47ea81288e0db2c0a893839acc9ed2698",
+    "main.py": "b9fc07c9f4b041009abedfc60e93f83d0cb56c8c5615f579a145a52584a12ada",
     "tests/requirements.lock": "c2b4bd4f1dbbc9eec4a63a0d957ca0d291fed90cd687225547473c2d504e6ba6",
     "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "tests/__main__.py": "e364893a5fba4b9c412be069b6e2dbfd60d7572ee70b63dccb493753da256e35",
+    "tests/__main__.py": "68f7826a471e11d76fd916881a8b6fe04f34dc605b8c168f04bd76e4cfaf3acd",
     "tests/generate_reference.py": "14c184b1dd9b1cb1dce958cb7f52e3bcd4e8576c7f3022584f36f3d7719a3b5c",
     "tests/reference.py": "7557430f0d991b1bede26cc704d50d322f15af182456d5e9ba7d05fda2407008",
-    "tests/test_suite.py": "559ccfbed63cc889ebe2082099060bad822f16ba10ec5d998cb3f0ce37d8f55f"
+    "tests/test_suite.py": "7b620f727fe704b0ab25ce10e7bd0827c74150b843896a57d933c6aa01d43698"
   },
-  "evidence_manifest_sha256": "98b783da1286476e0b3da0c5e55316fbf9423580afc77cf8b6c7994c7b240d74",
+  "evidence_manifest_sha256": "169dbcae1b122c7d7d2eae2103515050035466040e84233de3e39cc7cd2d48ad",
   "pending_criteria": [
     {
       "id": "CYS-AGE-COEFFICIENT",
@@ -6247,5 +6813,54 @@
     "high_values": "Estimaciones menos precisas a filtrados altos, según NIDDK. No se presenta el valor calculado como una medida exacta.",
     "guideline_difference": "KDIGO 2024, tabla 11, página impresa S184 (PDF 69), recomienda entero más próximo para informes de laboratorio. El decimal es el criterio del proyecto solicitado por Tomeu.",
     "verification": "Pares de conversión conocidos, entradas SI equivalentes a todos los casos con creatinina, límites de avisos SI, exclusión de ambas unidades y extremos numéricos."
+  },
+  "albuminuria_assessment": {
+    "source": "KDIGO-2024",
+    "input": "CAC/ACR ya calculado en orina, acr_mg_g opcional, finito y >=0. Ausente o null: kdigo=null; cero: A1.",
+    "categories": {
+      "A1": "0 <= CAC < 30",
+      "A2": "30 <= CAC <= 300",
+      "A3": "CAC > 300"
+    },
+    "risk_matrix_columns": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "risk_matrix": {
+      "G1": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "G2": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "G3a": [
+        "moderate",
+        "high",
+        "very_high"
+      ],
+      "G3b": [
+        "high",
+        "very_high",
+        "very_high"
+      ],
+      "G4": [
+        "very_high",
+        "very_high",
+        "very_high"
+      ],
+      "G5": [
+        "very_high",
+        "very_high",
+        "very_high"
+      ]
+    },
+    "scope": "Cruce de categorías G y A y riesgo orientativo. No determina la causa ni confirma cronicidad o diagnóstico. No calcula el CAC a partir de concentraciones aisladas ni una probabilidad individual de fallo renal.",
+    "low_risk": "G1/G2 A1 no cumple criterios de ERC solo si no existen otros marcadores de daño renal.",
+    "verification": "Límites exactos y vecinos 30/300; cero frente a ausencia; 18 celdas directamente y por API; tres métodos y unidad SI; validación de tipos y dominio."
   }
 }

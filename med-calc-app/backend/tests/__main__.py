@@ -90,6 +90,7 @@ def main():
         'input_validation': sources['input_validation'],
         'discrepancy_rule': sources['discrepancy_rule'],
         'units_and_precision': sources['units_and_precision'],
+        'albuminuria_assessment': sources['albuminuria_assessment'],
     }
     reports = TESTS / 'reports'
     reports.mkdir(exist_ok=True)

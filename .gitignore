@@ -37,3 +37,5 @@ pnpm-debug.log*
 # Archivos locales
 uploads/
 tmp/
+"*.tmp" 
+"~WRL*.tmp" 

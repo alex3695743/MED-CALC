@@ -1,6 +1,6 @@
 {
-  "reference_set_version": "1.0.5",
-  "access_date": "2026-11-16",
+  "reference_set_version": "1.0.6",
+  "access_date": "2026-11-17",
   "module": "N1-eGFR-CKD-EPI",
   "review": {
     "performed_by": "Codex con comprobación documental y contraste externo NKF",
@@ -48,8 +48,8 @@
     {
       "id": "KDIGO-2024",
       "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
-      "locator": "Table 2, página impresa S137 (PDF 22); Table 11, página impresa S184 (PDF 69)",
-      "role": "Categorías G aplicadas antes del redondeo y contraste de la recomendación de informes de laboratorio."
+      "locator": "Matriz CGA S126 (PDF 11); tablas 2 y 3 S137 (PDF 22); tabla 11 S184 (PDF 69); cronicidad 1.1.3.2 S172 (PDF 57)",
+      "role": "Categorías G y A, matriz de riesgo G×A, cronicidad y contraste de presentación en laboratorio."
     },
     {
       "id": "TOMEU-INPUTS",
@@ -87,6 +87,23 @@
     "decimal_entry": "El frontend admite coma o punto. El payload JSON contiene números.",
     "interpretation": "Intervalos operativos de revisión de entradas. La evaluación clínica de los resultados sigue requiriendo su contexto.",
     "error_messages": "La API devuelve HTTP 422 con detail y errors por campo. Creatinina en mg/dL o µmol/L y cistatina C en mg/L."
+  },
+  "albuminuria_assessment": {
+    "source": "KDIGO-2024",
+    "input": "CAC/ACR ya calculado en orina, acr_mg_g opcional, finito y >=0. Ausente o null: kdigo=null; cero: A1.",
+    "categories": {"A1": "0 <= CAC < 30", "A2": "30 <= CAC <= 300", "A3": "CAC > 300"},
+    "risk_matrix_columns": ["A1", "A2", "A3"],
+    "risk_matrix": {
+      "G1": ["low", "moderate", "high"],
+      "G2": ["low", "moderate", "high"],
+      "G3a": ["moderate", "high", "very_high"],
+      "G3b": ["high", "very_high", "very_high"],
+      "G4": ["very_high", "very_high", "very_high"],
+      "G5": ["very_high", "very_high", "very_high"]
+    },
+    "scope": "Cruce de categorías G y A y riesgo orientativo. No determina la causa ni confirma cronicidad o diagnóstico. No calcula el CAC a partir de concentraciones aisladas ni una probabilidad individual de fallo renal.",
+    "low_risk": "G1/G2 A1 no cumple criterios de ERC solo si no existen otros marcadores de daño renal.",
+    "verification": "Límites exactos y vecinos 30/300; cero frente a ausencia; 18 celdas directamente y por API; tres métodos y unidad SI; validación de tipos y dominio."
   },
   "units_and_precision": {
     "source": "NIDDK-ADULTS",
